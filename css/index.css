@@ -1,0 +1,105 @@
+body {
+}
+
+ul li {
+  padding: 2px 0;
+}
+
+.works-item h2 {
+  padding-top: 16px;
+}
+
+.work-content {
+  list-style-type: decimal;
+  padding-left: 18px;
+}
+
+.work-content li {
+  padding: 2px 0;
+}
+
+.work-skill {
+  padding-top: 8px;
+  font-weight: bold;
+}
+
+.field-boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-box {
+  width: 286px;
+  /* border: 1px black solid; */
+  padding: 16px;
+}
+
+.field-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 8px;
+  border-bottom: 2px rgb(101, 91, 91) solid;
+}
+
+.field-box .first-list {
+  list-style-type: disc;
+  padding-left: 16px;
+}
+
+.field-box .second-list {
+  list-style-type: circle;
+  padding-left: 16px;
+}
+
+.resume-section-content .first-list {
+  list-style-type: disc;
+  padding-left: 24px;
+  margin-bottom: 32px;
+}
+
+.dev-icons {
+  margin-left: 16px;
+}
+
+.field-boxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 320px) {
+  .field-boxes {
+    justify-content: space-around;
+  }
+  .field-box {
+    width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .field-boxes {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* padding: 0 44px; */
+  }
+  .field-box {
+    width: 286px;
+  }
+
+  .field-boxes::after {
+    content: "";
+    width: 286px;
+  }
+}
+
+i {
+  width: 286px;
+}
+
+.works-item ul li span {
+  font-weight: bold;
+}
+
+.works-item h2 span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

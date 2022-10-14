@@ -1,353 +1,297 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+
 <head>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <link rel="stylesheet" href="css/style.css">
-    <title>Happy Lunar Year</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Resume_HsinHsinLiu</title>
+    <link rel="icon" type="image/x-icon" href="images/resume/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/resume.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
 </head>
-<body class="">
-    <div class="webpage">
-    <div class="bgUsual bgBox"></div>
-    
-    <div class="snowflakeList" style="display: none">
-        <script>
-            const redGet = document.querySelector('.snowflakeList');
-            let str = "";        
-            for( let i=0; i<20; i++ ){
-                let ranNum = (Math.floor(Math.random()*20)+1);
-               
-                if (ranNum <= 7 ){
-                    ranNum = (Math.floor(Math.random()*20)+1);
-                }else {
-                    str+=` <a class="snowflakeLista" href="javascript:void(0)" title="Click to open the red envelope" style="left: ${i*5}%; animation: udmoving ${ranNum}.${i}s linear infinite,lrmoving ${ranNum}.${i}s infinite linear alternate both;transform: translateY(-20vh);"><img src="images/xhb.gif"></a> ` ;
-}                
-           } 
-           redGet.innerHTML = str;   
-        </script>
-    </div>    
-    
-    <div class="loadingBlack" style="display: none">
-        <div class="loading"></div>
-    </div>
-    
-    <div class="win" style="display: none">
-        <div class="winimg">
-            <div class="wordimg"></div>
-            <div class="godimg"></div>
-        </div>
-        <div class="winTx">
-            Congratulations you getting<br>
-            <span id="amount">??</span>dollaws!
-        </div>
-    </div>
-    
-    <div class="notwin" style="display: none">
-        <div class="nowinimg">
-            <div class="wordimg"></div>
-            <div class="tigerimg"></div>
-        </div>
-        <div class="winTx">It's a pity! Try Again ~</div>
-    </div>
-    <div class="black"></div>
-    
-    <div class="wrapper">
-        <div class="headerTop">   
-            <div class="newsBox">
-                <div class="news">                    
-                    <div class="newsTit"><img src="images/icon01.png"></div>
-                    <marquee class="lunbo" direction="left" scrollamount="4" onmouseover="this.stop()" onmouseout="this.start()">
-                        Congratulations to zww***3 for getting $20.40, 
-                        Congratulations to tyl***9 for getting $16.1,
-                        Congratulations to hry***8 for getting $4.50,
-                        Congratulations to aus***n for getting $18.1,
-                        Congratulations to hui***1 for getting $1.00,
-                        Congratulations to ron***1 for getting $662.1,
-                        Congratulations to jj7***9 for getting $3.60,
-                        Congratulations to 518***e for getting $646.8,
-                    </marquee>
-                </div>
-            </div>
-        </div>
-            <div class="titleBg"></div>
-            
-            <div class="TextBox">
-                <div class="Text">
-                    <img src="images/icon_2.png" />
-                    <div class="userName">
-                        <div class="h1"></div>
-                        <div class="elenew-gamejp-prize clearfix">
-                            <span id="totalPeople" class="number"></span>
-                        </div>
-                        <div class="h1">people played</div>
-                    </div>
-                </div>
-                <div class="Text">
-                    <img src="images/icon_3.png" />
-                    <div class="userGold">
-                        <div class="h1"></div>
-                        <div class="elenew-gamejp-prize clearfix">
-                            <input id="totalMoney" type="hidden" value="timestampX">
-                            <span id="formatTotalMoney" class="number"></span>
-                        </div>
-                        <div class="h1">dollars has been sent</div>
-                    </div>
-                </div>
-            </div>
 
-        
-        
-        <input type="hidden" id="isActive" value="false">
-        <div class="Countdown">
-            <div class="hb_for wordbox">               
-                <div id="message" class="txt"></div>
-                <div class="HotDate">
-                    <div class="tle">Let's start the game!</div>
-                    <span>
-                        <em id="playTimes" style="display: none">次</em>
-                    </span>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">HSIN-HSIN LIU</span>
+            <!-- /<span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                    src="assets/img/profile.jpg" alt="..." /></span> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">關 於 我</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">工作經驗</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">教育背景</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">技   能</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#project">作   品</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+        <!-- About-->
+        <section class="resume-section" id="about">
+            <div class="resume-section-content">
+                <h1 class="mb-0">
+                    HSIN-HSIN
+                    <span class="text-primary">LIU</span>
+                </h1>
+                <div class="subheading mb-5">
+
+                    <a href="mailto:serendipitous251@gmail.com">haluka207@gmail.com</a>
                 </div>
+                <p class="lead mb-5">如果您喜歡我的作品，歡迎與我聯繫！</p>
+                <div class="social-icons">
+                    <!-- <a class="social-icon" href="https://www.linkedin.com/in/min-shin-liu-100116163"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="social-icon" href="https://github.com/minliu10"><i class="fab fa-github"></i></a> -->
+                    <!-- <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a> -->
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Experience-->
+        <section class="resume-section" id="experience">
+            <div class="resume-section-content">
+                <h2 class="mb-5">工作經驗</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">網頁美術設計師</h3>
+                        <div class="subheading mb-3">郝創意有限公司</div>
+                        <ol class="work-content">
+                            <li>遊戲網頁視覺設計</li>
+                            <li>BANNER、LOGO、EDM...設計</li>
+                            <li>網頁切版</li>
+                            <li>網站維護</li>
+                            <li>後台介面優化</li>                           
+                        </ol>
+                        <p class="work-skill">工作使用： HTML、CSS/SASS、JavaScript、JQuery、Photoshop、Illustrator
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">03/2020 - 03/2022</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">網頁美術設計師</h3>
+                        <div class="subheading mb-3">藝誠科技有限公司</div>
+                        <ol class="work-content">
+                            <li>公司形象網頁視覺設計</li>
+                            <li>BANNER、LOGO設計</li>
+                            <li>網頁切版</li>
+                            <li>網站維護</li>                             
+                        </ol>
+                        <p class="work-skill">工作使用： HTML、CSS/SASS、JQuery、Photoshop、Illustrator、flash</p> 
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">05/2016 - 08/2018</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">行銷企劃</h3>
+                        <div class="subheading mb-3">劍湖山世界主題樂園</div>
+                        <ol class="work-content">
+                            <li>樂園活動執行與推廣</li>
+                            <li>EDM設計</li>
+                            <li>FB小編</li>
+                            <li>公司網站維護</li>                              
+                        </ol>
+                        <p class="work-skill">工作使用： Photoshop、Illustrator、flash</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">07/2011 - 10/2014</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">美工設計</h3>
+                        <div class="subheading mb-3">劍湖山世界主題樂園</div>
+                        <ol class="work-content">
+                            <li>樂園賣店看板、活動DM設計</li>
+                            <li>賣店商品設計</li>
+                            <li>廠商聯絡發包</li>                             
+                        </ol>
+                        <p class="work-skill">工作使用： Photoshop、Illustrator</p> 
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">10/2009 - 05/2011</span></div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="education">
+            <div class="resume-section-content">
+                <h2 class="mb-5">教育背景</h2>
                 
-                <button href="javascript:void(0)" id="play_button" class="playbtn2" data-login="False">
-                    <div class="object">
-                        <img src="images/hand.png" width="85" height="auto">
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">課程：物聯網開發與行動裝置應用(幼獅)班</h3>
+                        <div class="subheading mb-3">勞動力發展署桃竹苗分署(900小時)</div>
+                        <ul class="first-list">
+                            <li>C 語言實作 MCU 單晶片韌體應用(8051, HT66F2390, ARM Cortex-M0)</li>
+                            <li>Java 程式入門至 Android App 撰寫</li>
+                            <li>樹莓派與各種感測器的應用</li>
+                            <li>Linux系統基本操作</li>
+                            －架設 Nginx + MySQL 學習 NAS 實作與 IoT 實務
+                            <li>Python 結合 PHP 進行硬體資料記錄跟資料庫管理</li>
+                        </ul>
                     </div>
-                    <img src="images/b-btn.png?210203" />
-                </button>
+                    <div class="flex-shrink-0"><span class="text-primary">07/2019 - 12/2019</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">中原大學</h3>
+                        <div class="subheading mb-3">商業設計學系</div>
+                        <ul class="first-list">
+                            <li>新一代畢業展  flash互動社群模擬</li>                            
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">09/2005 - 06/2009</span></div>
+                </div>
             </div>
-        </div>
-        
-        <div class="box eventWay2">
-            <a href="#" class="boxBtnHover"><img src="images/box-btn.png?210203" alt="" /></a>
-        </div>        
-        
-        <div class="model"></div>
-    </div>
-    <div class="howToPlayBox" style="display:none;">
-        <div class="howToPlay">
-            <h3>How to Play</h3>
-            <ul>
-                <li><img src="images/icon_2.png">
-                    <span>Clicking “ <strong>START</strong> ” button, enter the account & password, 
-                    and then click “ <strong>START</strong> ” button again to start game.</span></li>
-                <li><img src="images/icon_2.png">
-                    <span>After logging in, each player can <strong>play 3 times,</strong> and randomly
-                    click to drop the red envelope to get the bonus.</span></li>
-                <li><img src="images/icon_2.png">
-                    <span>After the play times is zero, please re-enter <span>New</span> account & 
-                    password to play again.</span></li>
-            </ul>
-            <button class="closeBtn">OK</button>
-        </div>
-        <div class="projectbox">
-            <ul>               
-                <li class="project tiger2"></li>
-            </ul>
-        </div>           
-    </div>
-    <div class="projectbox">
-        <ul>
-            <li class="project god"></li>
-            <li class="project cloud"></li>
-            <li class="project Lantern"></li>
-            <li class="project cloudL"></li>
-            <li class="project cloudR"></li>
-            <li class="project tiger2"></li>
-            <li class="project goldR"></li>
-            <li class="project goldD"></li>
-            <li class="project waveL"></li>
-            <li class="project waveR"></li>
-        </ul>
-    </div> 
-   
-    <div id="quicksign" title="Login to Play" class="howToPlayBox" style="display:none;">
-        <div class="fastLoginBg howToPlay">
-            <h3>Login to Play</h3>
-            <ul class="fastLoginBox">                
-                    <li>Account : <input type="text" class="userNameLogin"></li>
-                    <li>Password : <input type="text" class="userPasswordLogin"></li>                    
-            </ul>
-            <h4><img src="images/icon_2.png"><span class="messageText">Please enter your account & password.</span></h4>
+        </section>
+        <hr class="m-0" />
+        <!-- Skills-->
+        <section class="resume-section" id="skills">
+            <div class="resume-section-content">
+                <h2 class="mb-5">技能</h2>
+                <div class="subheading mb-3">程式語言 & 工具</div>
 
-            <input type="button" value="send" class="btnSendLogin">
-        </div>
-        <div class="projectbox">
-            <ul>               
-                <li class="project model"></li>
-            </ul>
-        </div>   
-    </div> 
+                <div class="field-boxes">
+                    <div class="field-box">
+                        <p class="field-title">前端</p>
+                        <ul class="first-list">
+                            <li>使用HTML、CSS/SCSS完成網頁切版</li>
+                            <li>使用CSS Animation製作網頁動態效果</li>
+                            <li>使用JavaScript、JQuery實現互動功能</li>  
+                            <li>RWD、BootStrap</li>                          
+                        </ul>
+                    </div>
 
-</div></body>
+                    <div class="field-box">
+                        <p class="field-title">版本控制&作業系統</p>
+                        <ul class="first-list">
+                            <li>版本控制： Git, GitHub、GitLab</li>
+                            <li>Linux：基本指令操作</li>
+                            <li>Windows：PowerShell & 命令元 簡單指令協助文書處理</li>
+                        </ul>
+                    </div>
+
+                    <div class="field-box">
+                        <p class="field-title">設計</p>
+                        <ul class="first-list">
+                            <li>形象 / 活動網頁設計</li>
+                            <li>EDM、Banner設計</li>
+                            <li>Logo、圖像設計</li> 
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="list-inline dev-icons">                   
+                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-git"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-linux"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-windows"></i></li>
+                    <li style="display:inline-block;"><img src="images/resume/icon_psd.png"></li>
+                    <li style="display:inline-block;"><img src="images/resume/icon_ai.png"></li>
+                    <li style="display:inline-block;"><img src="images/resume/icon_fl.png"></li>
+                </ul>
+
+        </section>
+
+        <hr class="m-0" />
+        <!-- Works-->
+        <section class="resume-section" id="project">
+            <div class="resume-section-content">
+                <h2 class="mb-5 moreLink">作品-WEB <a href="showWork.html" class="moreLinka">More</a></h2>
+                <div class="works">
+                    <div class="works-item">
+                        <img src="images/resume/webGame01.jpg" alt="JQuery" />
+                        <h2>搶紅包小遊戲<span>Web</span></h2>
+                        <ul>
+                            <li><span>說明：</span>新年活動小遊戲</li>
+                            <li><span>備註：</span>靜態頁面</li>
+                            <li> <a href="https://hsinpistar.github.io/PistarPage/HappyGrabbing.html"
+                                    target="_blank">作品連結</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="works-item">
+                        <img src="images/resume/webGame02.jpg" alt="JQuery" />
+                        <h2>轉盤小遊戲<span>Web</span></h2>
+                        <ul>
+                            <li><span>說明：</span>聖誕活動小遊戲</li>
+                            <li><span>備註：</span>靜態頁面</li>
+                            <li> <a href="https://hsinpistar.github.io/PistarPage/HappyGrabbing.html"
+                                    target="_blank">作品連結</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="works-item">
+                        <img src="images/resume/webGame03.jpg" alt="JQuery" />
+                        <h2>尋寶小遊戲<span>Web</span></h2>
+                        <ul>
+                            <li><span>說明：</span>中秋活動小遊戲</li>
+                            <li><span>備註：</span>靜態頁面</li>
+                            <li> <a href="https://hsinpistar.github.io/PistarPage/HappyGrabbing.html"
+                                    target="_blank">作品連結</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="works-item">
+                        <img src="images/resume/web01.jpg" alt="JQuery" title="冠鵬旅行社"/>
+                        <h2>形象網頁</h2>
+                        <ul>
+                            <li><span>說明：</span>公司形象網頁</li>
+                            <li> <a href="http://www.337123.com.tw/index.aspx" target="_blank">作品連結</a></li>
+                            <li> <a href="https://drive.google.com/file/d/19L1bViebf5ohXcRucmdNlm0yNDeLAe-e/view" target="_blank">大圖連結</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="works-item">
+                        <img src="images/resume/web02.jpg" alt="JQuery" title="艸研所"/>
+                        <h2>形象網頁</h2>
+                        <ul>
+                            <li><span>說明：</span>公司形象網頁</li>
+                            <li> <a href="https://drive.google.com/file/d/1_3B22-bmo79NdyfMUPOk11NPwv6u3Kv5/view" target="_blank">大圖連結</a></li>
+                        </ul>
+                    </div>
+                    <div class="works-item">
+                        <img src="images/resume/web03.jpg" alt="JQuery" title="米諾工坊"/>
+                        <h2>形象網頁</h2>
+                        <ul>
+                            <li><span>說明：</span>公司形象網頁</li>
+                            <li> <a href="https://drive.google.com/file/d/1BKhamMuFcoEGkocgmaUCwPVCDQyvuFr7/view" target="_blank">大圖連結</a></li>
+                        </ul>
+                    </div>
+
+                    <!--flex排版佔位-->
+                    <i></i>
+                    <i></i>
+                </div>
+            </div>
+        </section>        
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>
-
-<script>   
-    const startGame = document.querySelector('.boxBtnHover');
-    const playBtn = document.querySelectorAll('.snowflakeLista');
-    const loadback = document.querySelector('.loadingBlack');
-    const winback = document.querySelector('.win');
-    const nowinback = document.querySelector('.notwin');
-    const gold = document.querySelector('#amount');
-    const playTimes = document.querySelector('#playTimes');
-    const playMessage = document.querySelector(".tle");
-    const totalPeople = document.querySelector("#totalPeople");
-    const formatTotalMoney = document.querySelector("#formatTotalMoney");
-    const howToPlayBox = document.querySelector(".howToPlayBox");
-    const closeBtn = document.querySelector(".closeBtn");
-    
-
-    let playTime = 3;
-    playTimes.textContent = playTime+'times';
-
-    let peoplenumberNum = (Math.floor(Math.random()*10)+1)*100 + (Math.floor(Math.random()*10)+1);
-    let formatTotalMoneyNum = (Math.floor(Math.random()*1000)+1)*100;
-    let userGoldNum = 0;
-    let luckynumberNum = 0;    
-    
-
-    totalPeople.textContent = peoplenumberNum;
-    formatTotalMoney.textContent = formatTotalMoneyNum;
-
-    startGame.addEventListener('click',function(){
-        howToPlayBox.style.display = "block";
-        
-    })
-
-    closeBtn.addEventListener('click',function(){
-        howToPlayBox.style.display = "none";
-        
-    })
-
-    //紅包點擊
-    playBtn.forEach(e => {
-        e.addEventListener('click',function(e){
-
-            console.log("press");
-            
-     
-            luckynumber = Math.floor(Math.random()*10)+1;
-            console.log(luckynumber);           
-
-
-            if (luckynumber % 2 == 0) {
-             console.log("luckyNum");
-             redGet.style.display = "none";
-             loadback.style.display = "block";
-             setTimeout(function(){    
-                loadback.style.display = "none"; 
-                winback.style.display = "block";                 
-                gold.textContent =  luckynumber *100;
-                
-                
-
-            },5000);  
-            winback.addEventListener("click",function(){
-                winback.style.display = "none";
-            }); 
-            luckynumberNum = luckynumber *100;       
-
-             }else {
-                console.log("Nolucky");
-                redGet.style.display = "none";
-                loadback.style.display = "block";
-                setTimeout(function(){    
-                   loadback.style.display = "none"; 
-                   nowinback.style.display = "block";
-                             
-               },5000); 
-               nowinback.addEventListener("click",function(){
-                nowinback.style.display = "none";                
-                });
-                luckynumberNum = 0;          
-             }
-            
-                
-            playTime = playTime-1;
-            playTimes.textContent = playTime+'times'; 
-            
-            userGoldNum = userGoldNum + luckynumberNum ;
-            //userGold.textContent = "You got" + userGoldNum + "dallows" ;
-            userGold.innerHTML = `You got <strong>${userGoldNum}</strong> dallows` ;
-           
-         })
-    })
-
-    //登入功能
-
-    const quickSign = document.querySelector("#quicksign");
-
-    const userNameLogin = document.querySelector('.userNameLogin');
-    const userPasswordLogin = document.querySelector(".userPasswordLogin");
-    const btnSendLogin = document.querySelector(".btnSendLogin");
-    
-    const messageText = document.querySelector(".messageText");
-    const userName = document.querySelector(".userName");
-    const userGold = document.querySelector(".userGold");
-
-    const playbutton = document.querySelector("#play_button");
-    let userLogin = false;
-    
-    playbutton.addEventListener('click',function(e){
-        console.log("startpress");
-        
-
-
-        if(userLogin == false){
-            quickSign.style.display = "block"; 
-            quickSign.style.position = "absolute";           
-            userLogin = true;
-            playMessage.textContent="You can play :";            
-            playTimes.style.display="block";
-            
-        }else if(userLogin == true) {
-            
-            if (playTime == 0) {
-                alert("Your play times is ZERO !");
-            }else {
-                redGet.style.display = "block";
-                console.log("startGame");
-            }
-        }
-
-
-    })
-
-    
-    btnSendLogin.addEventListener('click',function(e){
-        console.log("press");
-        callLogin();
-        //userName.textContent= "Hi~ Welcome player "+ userNameLogin.value;
-        userName.innerHTML= `Hi~ Welcome player <strong>${userNameLogin.value}</strong>`;
-        //userGold.textContent = "You got" + " " + userGoldNum + " dallows" ; 
-        userGold.innerHTML = `You got  <strong>${userGoldNum}</strong> dallows `;        
-    })
-
-    function callLogin(){
-
-        if(userNameLogin.value =="" || userPasswordLogin.value =="" ){
-            messageText.textContent = "Login account & password input error.";
-            return;
-          }else {
-            
-            messageText.textContent = "Login successfully! Let'a start the game!";
-            setTimeout(function(){    
-                quickSign.style.display = "none"; 
-                        
-            },3000); 
-          }
-    }
-    
-    function renderRedEnvelope(){
-        let str = "";        
-        for( let i=0; i<20; i++ ){
-            let ranNum = (Math.floor(Math.random()*20)+1);
-            str+=` <a class="snowflakeLista" href="javascript:void(0)" title="Click to open the red envelope" style="left: ${i*5}%; animation: udmoving ${ranNum}.${i}s linear infinite,lrmoving ${ranNum}.${i}s infinite linear alternate both;transform: translateY(-20vh);"><img src="images/xhb.gif"></a> ` ;
-       } 
-       redGet.innerHTML = str;
-    }
-
-      
-
-</script>

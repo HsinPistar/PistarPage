@@ -3,7 +3,7 @@ body {
     margin: 0px;
     background: #420007;
     /*font-family: "SimHei", "Microsoft YaHei", Arial, Helvetica, sans-serif;*/
-    background: url('../images/bg.jpg') top center no-repeat #ffc102;
+    background: url('../images/happyGrabbing/bg.jpg') top center no-repeat #ffc102;
     background-size:cover;
     font: 18px/1.8 Microsoft Yahei,Arial,Helvetica,sans-serif;
     height: 100vh;
@@ -37,13 +37,13 @@ button {
     height: 100vh;
 }
 /*.bgUsual {
-    background: url('../images/bg.jpg') top center no-repeat #420007;
+    background: url('../images/happyGrabbing/bg.jpg') top center no-repeat #420007;
 }*/
 .bgUsual::before {
     content:"";
     width: 100%;
     height: 100vh;
-    background: url('../images/golds.png') top center no-repeat;
+    background: url('../images/happyGrabbing/golds.png') top center no-repeat;
     position: absolute;
     background-size: cover;
     top:5vh;
@@ -63,7 +63,7 @@ button {
     position: absolute;
     left:calc(50% + 7vw );
     top: 205px;
-    background: url(../images/model2_jb.png) no-repeat bottom right;
+    background: url(../images/happyGrabbing/model2_jb.png) no-repeat bottom right;
     width: 100%;	
     max-width: 835px;
     height: 805px;
@@ -268,7 +268,7 @@ ul, li {
     justify-content: flex-start;
 }
 .loading{
-    background: url(../images/Trans.png) no-repeat center top;
+    background: url(../images/happyGrabbing/Trans.png) no-repeat center top;
     background-size: contain;
     width: 100%;
     /*max-width: 874px;*/
@@ -280,7 +280,7 @@ ul, li {
 }
 
 .loadingimg {
-    background: url(../images/trans_light.png) no-repeat center center;
+    background: url(../images/happyGrabbing/trans_light.png) no-repeat center center;
     width: 100%;
     height: 685px;
     position: absolute;
@@ -292,7 +292,7 @@ ul, li {
 .loading::before,
 .loading::after  {
     content:"";
-    background: url(../images/trans_shine.png) no-repeat center center;
+    background: url(../images/happyGrabbing/trans_shine.png) no-repeat center center;
     background-size: contain;
     width: 100%;
     height: 80px;
@@ -353,7 +353,7 @@ ul, li {
 /*贏錢時-----------------------------------------*/
 
 .win, .notwin {
-    background: url(../images/win.png) no-repeat center center;
+    background: url(../images/happyGrabbing/win.png) no-repeat center center;
     max-width: 1077px;
     width: 100%;
     height: 794px;
@@ -381,21 +381,21 @@ ul, li {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: url(../images/txtbg.png) center center;
+    background: url(../images/happyGrabbing/txtbg.png) center center;
     background-repeat: repeat-x;
     padding: 20px 10px;
     position: relative;
     top:-5px;
 }
 .notwin .winTx {
-    background: url(../images/txtbgB.png) center center;
+    background: url(../images/happyGrabbing/txtbgB.png) center center;
 }
 .win .winTx:before,
 .notwin  .winTx:before,
 .win .winTx:after,
 .notwin  .winTx:after{
     content: "";
-    background: url(../images/txtbg1.png) no-repeat center center;
+    background: url(../images/happyGrabbing/txtbg1.png) no-repeat center center;
     width: 100%;
     height:82px;
     position: absolute;
@@ -405,7 +405,7 @@ ul, li {
 }
 .notwin  .winTx:before,
 .notwin  .winTx:after{    
-    background: url(../images/txtbgB1.png) no-repeat center center;   
+    background: url(../images/happyGrabbing/txtbgB1.png) no-repeat center center;   
     left: -52%;
     top: 1px;
 }
@@ -432,7 +432,7 @@ ul, li {
     display:none;
 }
 .godimg {
-    background: url(../images/godimg.png) center center no-repeat;
+    background: url(../images/happyGrabbing/godimg.png) center center no-repeat;
     width: 100%;
     height: 493px;
     background-size: contain;
@@ -443,7 +443,7 @@ ul, li {
 }
 .godimg::before {
     content: "";
-    background: url(../images/godgold.png) center center no-repeat;
+    background: url(../images/happyGrabbing/godgold.png) center center no-repeat;
     width: 100%;
     height:150px;
     position: absolute;
@@ -453,7 +453,7 @@ ul, li {
 }
  .godimg::after {
     content: "";
-    background: url(../images/godeye.png) center center no-repeat;
+    background: url(../images/happyGrabbing/godeye.png) center center no-repeat;
     width: 100%;
     height:20px;
     position: absolute;
@@ -463,7 +463,7 @@ ul, li {
 }
 .win .winimg::before, .win .winimg::after {
     content: "";
-    background: url(../images/redgold.png) bottom center no-repeat;
+    background: url(../images/happyGrabbing/redgold.png) bottom center no-repeat;
     width: 100%;
     height:453px;
     background-size: contain;
@@ -474,7 +474,7 @@ ul, li {
 }
 
 .win .winimg::before {
-    background: url(../images/redgolds.png) top center no-repeat;
+    background: url(../images/happyGrabbing/redgolds.png) top center no-repeat;
     height:458px;
     animation: goldimg 0.8s infinite;
     animation-timing-function:ease-in-out;
@@ -488,7 +488,7 @@ ul, li {
     opacity: 1;
 }
 .winimg .wordimg {
-    background: url(../images/wordimg2.png) top center no-repeat;  
+    background: url(../images/happyGrabbing/wordimg2.png) top center no-repeat;  
     top: 445px;  
 }
 .winimg .wordimg::before {
@@ -515,7 +515,7 @@ ul, li {
 /*沒贏錢時------------------------------------------------------------------------------------*/
 
 .win,.notwin {
-    background: url(../images/nowinbg.png) center 10px no-repeat;
+    background: url(../images/happyGrabbing/nowinbg.png) center 10px no-repeat;
     position: absolute;  
     width: 100%;   
     display: flex;
@@ -527,7 +527,7 @@ ul, li {
     height: 100%;
 }
 .winimg, .nowinimg {
-    /*background: url(../images/nowinbg.png) top center no-repeat;*/
+    /*background: url(../images/happyGrabbing/nowinbg.png) top center no-repeat;*/
     width: 100%;
     height: 694px;
     background-size: contain;
@@ -538,7 +538,7 @@ ul, li {
 }
 .nowinimg::before, .nowinimg::after, .wordimg::before {
     content: "";
-    background: url(../images/redimg.png) top center no-repeat;
+    background: url(../images/happyGrabbing/redimg.png) top center no-repeat;
     width: 100%;
     height:135px;
     background-size: contain;
@@ -551,7 +551,7 @@ ul, li {
     animation-timing-function:ease-in-out;
 }
 .nowinimg::after{
-    background: url(../images/redimg2.png) top center no-repeat;
+    background: url(../images/happyGrabbing/redimg2.png) top center no-repeat;
     top: 38%;
     left: -25%;
     height: 120px;
@@ -559,7 +559,7 @@ ul, li {
     animation-delay: 0.2s;
 }
 .wordimg::before {
-    background: url(../images/redimg3.png) top center no-repeat;
+    background: url(../images/happyGrabbing/redimg3.png) top center no-repeat;
     top: 60%;
     right: -28%;
     height: 90px;    
@@ -569,7 +569,7 @@ ul, li {
 }
 
 .wordimg {
-    background: url(../images/wordimg.png) top center no-repeat;
+    background: url(../images/happyGrabbing/wordimg.png) top center no-repeat;
     width: 100%;
     height: 253px;
     background-size: contain;
@@ -579,7 +579,7 @@ ul, li {
     z-index: 9;
 }
 .tigerimg {
-    background: url(../images/tigerimg.png) center center no-repeat;
+    background: url(../images/happyGrabbing/tigerimg.png) center center no-repeat;
     width: 100%;
     height: 341px;
     background-size: contain;
@@ -590,7 +590,7 @@ ul, li {
 }
  .tigerimg::before {
     content: "";
-    background: url(../images/tigerimgtail.png) center center no-repeat;
+    background: url(../images/happyGrabbing/tigerimgtail.png) center center no-repeat;
     width: 122px;
     height:95px;
     background-size: contain;
@@ -604,7 +604,7 @@ ul, li {
  }
  .tigerimg::after {
     content: "";
-    background: url(../images/tigerimghand.png) center center no-repeat;
+    background: url(../images/happyGrabbing/tigerimghand.png) center center no-repeat;
     width: 67px;
     height:70px;
     background-size: contain;
@@ -700,7 +700,7 @@ ul, li {
     content: "";	
     width: 100%;	
     height:100px;	
-    background: url(../images/iconbg.png) left center no-repeat;	
+    background: url(../images/happyGrabbing/iconbg.png) left center no-repeat;	
     position: absolute;	
     left: -15px;	
     top:-12px;	
@@ -730,7 +730,7 @@ ul, li {
     float: left;
 }
 .titleBg {
-    background: url(../images/title.png?210201) no-repeat center center;
+    background: url(../images/happyGrabbing/title.png?210201) no-repeat center center;
     width:100%;
     height: 320px;
     margin-top: 40px;
@@ -738,7 +738,7 @@ ul, li {
 }
 .titleBg::after {
     content: "";
-    background: url(../images/trans_light.png?) no-repeat center center;
+    background: url(../images/happyGrabbing/trans_light.png?) no-repeat center center;
     width:100%;
     height: 685px;
     position: absolute;
@@ -770,7 +770,7 @@ ul, li {
 }
 .newsBox::after {	
     content: "";	
-    background: url(../images/reel.png) no-repeat left center;	
+    background: url(../images/happyGrabbing/reel.png) no-repeat left center;	
     width: 100%;	
     height: 100PX;	
     position: absolute;	
@@ -799,7 +799,7 @@ marquee.lunbo {
     bottom: 0;
     left: -29.5%;
     font-size: 0;
-    background: url(../images/tigerL.png) no-repeat top center;
+    background: url(../images/happyGrabbing/tigerL.png) no-repeat top center;
     max-width: 653px;
     width: 100%;
     height: 619px;
@@ -810,7 +810,7 @@ marquee.lunbo {
 }
 .model::before {
     content: "";
-    background: url(../images/tigerleye.png) no-repeat center center;
+    background: url(../images/happyGrabbing/tigerleye.png) no-repeat center center;
     width: 100%;
     height: 69px;
     position: absolute;
@@ -824,7 +824,7 @@ marquee.lunbo {
     position: absolute;
 }
 .tiger2 {	
-    background: url(../images/model2_jb.png) no-repeat top center;	
+    background: url(../images/happyGrabbing/model2_jb.png) no-repeat top center;	
     max-width: 420px;
     width: 100%;	
     height: 420px;	
@@ -837,7 +837,7 @@ marquee.lunbo {
 }
 .tiger2::before{
     content: "";
-    background: url(../images/tiger2eye.png) no-repeat top center;
+    background: url(../images/happyGrabbing/tiger2eye.png) no-repeat top center;
     width: 100%;
     height:60px;
     position: absolute;
@@ -848,7 +848,7 @@ marquee.lunbo {
 }
 .tiger2::after{
     content: "";
-    background: url(../images/tiger2tail.png) no-repeat top center;
+    background: url(../images/happyGrabbing/tiger2tail.png) no-repeat top center;
     width: 100%;
     height:143px;
     position: absolute;
@@ -859,7 +859,7 @@ marquee.lunbo {
     animation: tiger2tailmove 2s linear infinite; 
 }		
 .goldR {	
-    background: url(../images/goldR.png) no-repeat center center;	
+    background: url(../images/happyGrabbing/goldR.png) no-repeat center center;	
     max-width: 283px;	
     width: 100%;
     height: 245px;
@@ -872,7 +872,7 @@ marquee.lunbo {
     animation-delay: -0.2s;
 }	
 .god {	
-    background: url(../images/god.png) no-repeat top center;	
+    background: url(../images/happyGrabbing/god.png) no-repeat top center;	
     max-width: 370px;	
     width: 100%;
     height: 540px;	
@@ -885,7 +885,7 @@ marquee.lunbo {
     animation-delay:1s;
 }	
 .cloud {	
-    background: url(../images/cloud.png) no-repeat top center;
+    background: url(../images/happyGrabbing/cloud.png) no-repeat top center;
     max-width: 594px;
     width: 100%;
     height: 361px;
@@ -895,7 +895,7 @@ marquee.lunbo {
     top:64%;
 }	
 .cloudL {	
-    background: url(../images/cloudL.png) no-repeat top center;	
+    background: url(../images/happyGrabbing/cloudL.png) no-repeat top center;	
     max-width: 227px;
     width: 100%;	
     height: 128px;	
@@ -906,7 +906,7 @@ marquee.lunbo {
     animation-delay: -1s;	
 }	
 .cloudR {	
-    background: url(../images/cloudR.png) no-repeat top center;	
+    background: url(../images/happyGrabbing/cloudR.png) no-repeat top center;	
     max-width: 213px;	
     width: 100%;
     height: 122px;	
@@ -917,7 +917,7 @@ marquee.lunbo {
     animation-delay: 1.2s;		
 }
 .redimgR{
-    background: url(../images/redright.png) no-repeat top center;	
+    background: url(../images/happyGrabbing/redright.png) no-repeat top center;	
     max-width: 95px;	
     width: 100%;
     height: 112px;	
@@ -928,7 +928,7 @@ marquee.lunbo {
     animation-timing-function:ease-in-out;
 }
 .goldD {	
-    background: url(../images/goldD.png) no-repeat center center;	
+    background: url(../images/happyGrabbing/goldD.png) no-repeat center center;	
     max-width: 200px;	
     width: 100%;
     height: 125px;	
@@ -941,7 +941,7 @@ marquee.lunbo {
 }
 
 .waveL {	
-    background: url(../images/waveL.png) no-repeat top center;	
+    background: url(../images/happyGrabbing/waveL.png) no-repeat top center;	
     max-width: 675px;	
     width: 100%;
     height: 427px;	
@@ -1012,7 +1012,7 @@ marquee.lunbo {
   } 
   
 .waveR {	
-    background: url(../images/waveR.png) no-repeat top center;
+    background: url(../images/happyGrabbing/waveR.png) no-repeat top center;
     max-width: 736px;
     width: 100%;
     height: 345px;
@@ -1027,7 +1027,7 @@ marquee.lunbo {
 li.Lantern {	
     right: -3.5vw;
     top: -290px;
-    background: url(../images/lantern.png) no-repeat top center;	
+    background: url(../images/happyGrabbing/lantern.png) no-repeat top center;	
     max-width: 517px;    	
     height: 720px;	
     z-index: -2;	
@@ -1038,7 +1038,7 @@ li.Lantern {
 .coinBottom {
     left:0;
     bottom:0;
-    background: url(../images/bg_coin_jb.png) no-repeat top center;
+    background: url(../images/happyGrabbing/bg_coin_jb.png) no-repeat top center;
     width:100%;
     max-width:1920px;
     height:449px;
@@ -1054,7 +1054,7 @@ li.Lantern {
 }
 
 .box {
-    background: url('../images/box.png?2021') no-repeat;
+    background: url('../images/happyGrabbing/box.png?2021') no-repeat;
     width: 240px;
     height: 200px;
 }
@@ -1091,7 +1091,7 @@ a.boxBtnHover:hover img {
     justify-content: center;
     position: absolute;
     z-index: 999;
-    background: url(../images/howPlaysay01.png) #ec7189;
+    background: url(../images/happyGrabbing/howPlaysay01.png) #ec7189;
     background-repeat: repeat-x;
     background-position: 0px -13px;
     padding: 1vw;
@@ -1104,7 +1104,7 @@ a.boxBtnHover:hover img {
     width: 80px;
     height: 300px;
     position: absolute;
-    background: url(../images/howPlaysay.png) 0px 0px no-repeat;
+    background: url(../images/happyGrabbing/howPlaysay.png) 0px 0px no-repeat;
     left: -60px;
     top: -13px;
     z-index: -1;
@@ -1114,7 +1114,7 @@ a.boxBtnHover:hover img {
     width: 80px;
     height: 300px;
     position: absolute;
-    background: url(../images/howPlaysay.png) 0px 0px no-repeat;
+    background: url(../images/happyGrabbing/howPlaysay.png) 0px 0px no-repeat;
     transform: rotateY(180deg);
     right: -60px;
     top: -13px;
@@ -1125,7 +1125,7 @@ a.boxBtnHover:hover img {
     width: 80px;
     height: 300px;
     position: absolute;
-    background: url(../images/howPlaysay.png) 0px 0px no-repeat;
+    background: url(../images/happyGrabbing/howPlaysay.png) 0px 0px no-repeat;
     transform: rotateX(180deg);
     left: -60px;
     bottom: -43px;
@@ -1136,7 +1136,7 @@ a.boxBtnHover:hover img {
     width: 80px;
     height: 300px;
     position: absolute;
-    background: url(../images/howPlaysay.png) 0px 0px no-repeat;
+    background: url(../images/happyGrabbing/howPlaysay.png) 0px 0px no-repeat;
     transform: rotateX(180deg) rotateY(180deg);
     right: -60px;
     bottom: -43px;
@@ -1146,7 +1146,7 @@ a.boxBtnHover:hover img {
     content: "";
     width: 60vw;
     height: 50px;    
-    background: url(../images/howPlaysay01.png) #ec7189;
+    background: url(../images/happyGrabbing/howPlaysay01.png) #ec7189;
     background-repeat: repeat-x;
     background-position: 0px -13px;
     transform: rotateX(180deg);   
@@ -1164,7 +1164,7 @@ a.boxBtnHover:hover img {
 }
 .howToPlayBox .howToPlay h3::before {
     content: "";
-    background: url(../images/howPlay.png) no-repeat center center;
+    background: url(../images/happyGrabbing/howPlay.png) no-repeat center center;
     width: 500px;
     height: 100px;
     position: absolute;
@@ -1204,7 +1204,7 @@ a.boxBtnHover:hover img {
 .howToPlayBox .howToPlay button,
 .howToPlayBox .howToPlay .btnSendLogin {
     color: transparent;
-    background: url(../images/okbtn.png) no-repeat;
+    background: url(../images/happyGrabbing/okbtn.png) no-repeat;
     width: 300px;
     height: 200px;
     background-position: center center;
@@ -1212,7 +1212,7 @@ a.boxBtnHover:hover img {
     bottom: -160px;
 }
 .closeBtn {
-    background: url(../images/okbtn.png);
+    background: url(../images/happyGrabbing/okbtn.png);
     width:300px;
     height:270px;
 }
@@ -1251,10 +1251,10 @@ a.boxBtnHover:hover img {
 }
 .howToPlayBox .howToPlay .btnSendLogin {
     border: none;
-    background: url(../images/sendbtn.png) no-repeat top center;
+    background: url(../images/happyGrabbing/sendbtn.png) no-repeat top center;
 }
 .howToPlayBox .fastLoginBg.howToPlay h3::before {
-    background: url(../images/readyToPlay.png) no-repeat center center;
+    background: url(../images/happyGrabbing/readyToPlay.png) no-repeat center center;
     width: 515px;
 }
 .howToPlayBox .fastLoginBg.howToPlay h3::after {    
@@ -1613,7 +1613,7 @@ a.boxBtnHover:hover img {
         display: block;
     }
     .howToPlayBox .fastLoginBg.howToPlay h3::before {
-        background: url(../images/readyToPlay.png) no-repeat center center;
+        background: url(../images/happyGrabbing/readyToPlay.png) no-repeat center center;
         width:60vw;
         background-size: contain;
     }
@@ -1717,12 +1717,12 @@ a.boxBtnHover:hover img {
 
     .notwin .winTx:before,
     .notwin .winTx:after {
-        background: url(../images/txtbgBb1.png) center center no-repeat;
+        background: url(../images/happyGrabbing/txtbgBb1.png) center center no-repeat;
         padding: 25px 0; 
 
     }
     .notwin .winTx {
-        background: url(../images/txtbgBb2.png);        
+        background: url(../images/happyGrabbing/txtbgBb2.png);        
         background-position: center center;
         background-repeat: repeat-x;
         padding: 45px 0;
@@ -1810,8 +1810,8 @@ a.boxBtnHover:hover img {
 /*-------------RWD-----640-----------------------------------------*/
 
 @media screen and (max-width: 640px){
-    .box{background: url('../images/box-btn.png?20201') no-repeat; width:331px; height:218px;}
-    .box:hover{ background-image: url('../images/box-btn.png?2020101');}
+    .box{background: url('../images/happyGrabbing/box-btn.png?20201') no-repeat; width:331px; height:218px;}
+    .box:hover{ background-image: url('../images/happyGrabbing/box-btn.png?2020101');}
     .object { margin-left: inherit;right: -20px;left: auto;}
      img.get{ width:70px;}
     .tle, .txt, .HotDate>span em, .Text, .HotDate>span{ font-size: 21px;}
