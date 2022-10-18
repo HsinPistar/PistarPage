@@ -1,0 +1,1927 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+body {
+    font-family: 'Noto Sans SC', "微軟雅黑體",sans-serif;
+    font-size: 16px;
+}
+
+/*選單*/
+
+.navbar .container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+ul.nav.navbar-nav {
+    width: 100%;
+}
+
+.navbar-default {
+    background-color: #ffffff00;
+    border-style: none;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    background-color: #ffffff00;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #be53b5;
+    font-weight: 500;
+    padding: 0 15px;
+    letter-spacing: 1px;
+    transition: ease-in-out 0.5s;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ed4ea0;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #ffffff00;
+}
+.navselect {
+    transition: ease all 0.5s;
+}
+
+.navbarup {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    height: 127px;
+    background: #ffffffe0;
+    margin-top: -30px;
+    transition: all ease-in-out 0.5s;
+}
+ul.nav.navbar-nav {
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 42px 80px 0;
+}
+
+li.active {
+    margin: 0 -10px 0 0;
+}
+
+li.active {
+    animation-name: fliptest2;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+/*關於我們*/
+
+.logocolor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 26% 0 32% 5%;
+}
+
+.about::before {
+    content: "";
+    width: 692px;
+    height: 368px;
+    background-image: url(../images/empireGaming/back/logoback.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -9;
+    pointer-events: none;
+    
+}
+
+.about .container-fluid {
+    background: url(../images/empireGaming/back/logoback2.png) left 315px no-repeat;
+}
+
+.aboutbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding-bottom: 75px;
+}
+
+.aboutbox p {
+    font-size: 18px;
+    color: #ac25a0;
+    line-height: 34px;
+    letter-spacing: 0.6px;
+    padding: 0px 25px 0 200px;
+    text-align: justify;
+}
+.aboutbox span, .aboutbox a {
+    color: #ff3c96;
+    font-weight: 600;
+    font-size: 32px;
+    font-family: 'Audiowide';
+    padding:0 15px 0 0;
+    transition: all ease-in-out 0.3s;
+}
+.aboutbox p::first-letter {      
+    font-size: 42px;
+}
+.aboutbox span {
+    cursor: default;
+}
+.aboutbox span i {
+    font-family: 'Noto Sans SC', "微軟雅黑體",sans-serif;
+    font-style: normal;
+}
+.aboutbox a:hover, .aboutbox a:active, .aboutbox a:focus {    
+    text-decoration: none;
+}
+.aboutbox a:hover {
+    color: #ff876d;    
+}
+
+
+.aboutbox img {
+    position: absolute;
+    left: 0px;
+    top: -60px;
+}
+
+/*BANNER*/
+
+.banner {
+    position: relative;
+    /*top: -110px;*/
+    top:-185px;
+}
+
+.bannersm {
+    display: none;
+}
+
+.banner::after {
+    content: "";
+    width: 543px;
+    height: 524px;
+    background-image: url(../images/empireGaming/back/aboutback.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 90%;
+    z-index: -9;
+    pointer-events: none;
+}
+
+/*BANNER 動態元件*/
+
+.movepic {
+    position: absolute;    
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.movepic.movepic1 {
+    top: 21%;
+    right: 31%;
+    animation-name: moviepic1;
+}
+.movepic.movepic2 {
+    top: 56%;
+    right: 0;
+    animation-name: moviepic2;
+}
+.movepic.movepic3 {
+    top: 66%;
+    right: 48%;
+    animation-name: moviepic3;
+}
+
+@keyframes moviepic1 {
+    0% {
+        margin-top: 30px;
+    }
+    100% {
+        margin-bottom: 30px;
+    }
+}
+@keyframes moviepic2 {
+    0% {
+        margin-bottom: 15px;
+    }
+
+    100% {
+        margin-top: 15px;
+    }
+}
+@keyframes moviepic3 {
+    0% {
+        margin-bottom: 10px;
+    }
+    50% {
+        margin-bottom:5px;
+    }
+    100% {
+        margin-top: 15px;
+    }
+}
+
+/*業務範圍*/
+
+.titlebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.title {
+    position: relative;
+    z-index: 9;
+}
+
+.title h3 {
+    font-family: 'Audiowide', "微軟雅黑體",cursive;
+    font-size: 67px;
+    color: #9522d8;
+}
+
+.title h3::before {
+    content: "";
+    width: 112px;
+    height: 112px;
+    background: #fee679;
+    opacity: 0.7;
+    position: absolute;
+    border-radius: 10px;
+    transform: rotate(45deg);
+    z-index: -1;
+    top: -3px;
+    left: -29px;
+}
+
+.title h3::after {
+    content: "";
+    width: 63px;
+    height: 63px;
+    background: #f5529b;
+    opacity: 0.8;
+    position: absolute;
+    border-radius: 6px;
+    transform: rotate(45deg);
+    z-index: -2;
+    top: 23px;
+    left: 53px;
+}
+
+.title p::before {
+    content: "";
+    width: 34px;
+    height: 34px;
+    background: #ae28a2;
+    opacity: 0.8;
+    position: absolute;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    z-index: -3;
+    left: 56px;
+    bottom: -8px;
+}
+
+.title p {
+    font-size: 20px;
+    color: #312e31;
+    padding-left: 100px;
+    margin-top: -10px;
+}
+
+.businessbox ul {
+    list-style-type: none;
+}
+
+.businessbox p {
+    font-size: 30px;
+    color: #ac25a0;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding-left: 55px;
+}
+
+.businessbox ul {
+    margin-top: 100px;
+    padding-left: 80px;
+}
+
+.businessbox ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 43px 45px;
+    position: relative;
+    z-index: 9;
+    width: 80%;
+    cursor: default;
+}
+
+.businessbox ul li:first-child {
+    animation-delay: 0.6s;
+}
+
+.businessbox ul li:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.businessbox ul li:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+.businessbox ul li:last-child {
+    animation-delay: 1.8s;
+}
+
+.businessbox ul li:nth-child(2), .businessbox ul li:nth-child(3) {
+    margin-left: 85px;
+}
+
+.diamod {
+    width: 85px;
+    height: 85px;
+    background: #ff9671; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #ff9671 0%, #ffc75f 50%, #f9f871 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #ff9671 0%,#ffc75f 50%,#f9f871 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #ff9671 0%,#ffc75f 50%,#f9f871 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9671', endColorstr='#f9f871',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    transform: rotate(45deg);
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.businessbox ul li:hover .diamod {
+    animation-name: fliptest;
+    animation-duration: 1s;
+}
+
+.businessbox ul li:hover img {
+    animation-name: fliptest2;
+    animation-duration: 1.1s;
+}
+
+@keyframes fliptest {
+    from {
+        transform: rotateY(0deg) rotate(45deg);
+    }
+
+    to {
+        transform: rotateY(360deg) rotate(45deg);
+    }
+}
+
+@keyframes fliptest2 {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.businesspic {
+    padding-left: 140px;
+    padding-top: 0px;
+}
+
+/*遊戲類別*/
+
+.game {
+    padding: 60px 90px;
+}
+
+.titlebox.gametitle {
+    padding-top: 88px;
+    padding-bottom: 60px;
+}
+
+.titlebox.gametitle .title h3::before {
+    background: #feefbe;
+    opacity: 0.8;
+}
+
+.gamebox {
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+    display: block;
+    border-radius: 10px;
+}
+
+.gamebox img {
+    border-radius: 10px;
+    transition: all 0.6s ease;
+}
+
+.gamebox:hover img {
+    transform: scale(1.2);
+}
+
+.gamebox p {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f9f871+0,ffc75f+50,ff9671+100 */
+    background: #f9f871; /* Old browsers */
+    background: -moz-linear-gradient(left, #f9f871 0%, #ffc75f 50%, #ff9671 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #f9f871 0%,#ffc75f 50%,#ff9671 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #f9f871 0%,#ffc75f 50%,#ff9671 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f871', endColorstr='#ff9671',GradientType=1 ); /* IE6-9 */
+    padding: 18px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #6c0663;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+.gamebox1 {
+    animation-delay: 1s;
+}
+.gamebox2 {
+    animation-delay: 1.3s;
+}
+.gamebox3 {
+    animation-delay: 1.6s;
+}
+
+.gamebox4 {
+    animation-delay: 1.6s;
+}
+
+.gamebox5 {
+    animation-delay: 1.3s;
+}
+
+.gamebox6 {
+    animation-delay: 1s;
+}
+
+.lightpic {
+    width: 85px;
+    height: 240px;
+    background-image: url(../images/empireGaming/back/iderlight.png);
+    background-position: 0px 10px;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+    animation-name: light;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+}
+.movepic.ligjtidea {
+    left: 50.5%;
+    top: -20px;
+    z-index:-9;
+    animation-name: moviepic1;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes light {
+    0% {
+        background-position: 0px 0px;
+        
+    }
+
+    25% {
+        background-position: -84px 0px;
+    }
+    50% {
+        background-position: -169px 0px;
+       
+    }
+    75% {
+        background-position: -254px 0px;
+    }
+    
+    100% {
+        background-position: -339px 0px;
+    }
+}
+
+/*聯絡我們*/
+
+.containback {
+    background: url(../images/empireGaming/back/aboutback2.png) no-repeat -50px 65px;
+    margin-top: -255px;
+    padding-top: 180px;
+}
+
+.titlebox.contacttitle {
+    padding-top: 160px;
+}
+
+.contactbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 160px;
+}
+
+.contactbox ul {
+    list-style: none;
+}
+
+.contactbox ul li {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 45px;
+    position: relative;
+    z-index: 9;
+    cursor: default;
+}
+
+.contactbox ul li:hover .diamod {
+    animation-name: fliptest;
+    animation-duration: 1s;
+}
+
+.contactbox ul li:hover img {
+    animation-name: fliptest2;
+    animation-duration: 1.1s;
+}
+
+.contactbox p {
+    font-size: 34px;
+    color: #ac25a0;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding-left: 55px;
+}
+
+.contactbox ul li:nth-child(2) {
+    padding: 3px 0 0 100px;
+}
+
+.contactbox ul li:nth-child(2) p {
+    color: #ff65a7;
+}
+
+.contactbox .diamod {
+    left: 27px;
+    top: -15px;
+}
+
+.contactpic {
+    margin-top: -70px;
+}
+
+.contactpic::after {
+    content: "";
+    width: 651px;
+    height: 657px;
+    background-image: url(../images/empireGaming/back/contactback.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    z-index: -9;
+    pointer-events: none;
+}
+.movepicp {
+    top: -8.5%;
+    right: 40.5%;
+    animation-name: movepicp;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    
+}
+.movepic .movepic4 {
+    content: "";
+    width: 94px;
+    height: 42px;
+    background-image: url(../images/empireGaming/back/talkpicp.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation-name: movepic4;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-direction: alternate;
+}
+.movepicb {
+    top: 0.5%;
+    right: 50.5%;
+    animation-name: movepicb;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    
+}
+.movepic .movepic5 {
+    content: "";
+    width: 94px;
+    height: 42px;
+    background-image: url(../images/empireGaming/back/talkpicb.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation-name: movepic4;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+    animation-direction: alternate;
+    animation-delay:0.3s;
+}
+
+@keyframes movepic4 {
+    0% {
+        background-position: 96px 0px;     
+
+    }
+    25% {
+        background-position: 0px 0px;               
+    }
+
+    50% {
+        background-position: -96px 0px;
+
+    }
+    75% {
+        background-position: -191px 0px;
+        
+    }
+    100% {
+        background-position: -286px 0px;
+        
+    }
+}
+@keyframes movepicp {
+    0% {
+        margin-top:10px;
+        opacity:0;
+    }
+    100% {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes movepicb {
+    0% {
+        margin-top: 0px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 10px;
+        opacity: 1;
+    }
+}
+
+
+/*合作夥伴*/
+
+.partnerbox {
+    background: url(../images/empireGaming/back/partnerback.png) no-repeat center top;
+    background-clip: border-box;
+    background-size: cover;
+    margin-top: 45px;
+    padding-bottom: 70px;
+    background-attachment: fixed;
+}
+
+.big-demo {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.partnerbox .titlebox {
+    padding-top: 90px;
+    z-index: 9;
+    position: relative;
+}
+
+.title.partnertitle h3::before {
+    background: #fff1af;
+    opacity: 0.7;
+}
+
+.ui-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 0;
+    overflow: hidden;
+}
+
+.button-group {
+    position: relative;
+}
+
+.button-group::before {
+    content: "";
+    background: #f66d2f;
+    width: 225px;
+    height: 1px;
+    position: absolute;
+    top: 14px;
+    left: -33%;
+}
+
+.button-group::after {
+    content: "";
+    background: #f66d2f;
+    width: 225px;
+    height: 1px;
+    position: absolute;
+    top: 14px;
+    right: -33%;
+}
+
+.button {
+    border: #ff000000;
+    background: #ff000000;
+    color: #f66d2f;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    margin: 0px 10px 0 46px;
+    position: relative;
+    transition: all 0.3s ease-in;
+    outline: none;
+}
+
+.button:last-child {
+    margin-right: 0;
+}
+
+.button::before {
+    content: "";
+    background: #f66d2f;
+    width: 17px;
+    height: 17px;
+    display: block;
+    position: absolute;
+    left: -23px;
+    top: 7px;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    transition: all 0.3s ease-in;
+}
+
+.button:hover::before {
+    animation-name: fliptest;
+    animation-duration: 1s;
+}
+
+
+.button:hover {
+    color: #be4c96;
+}
+
+.button:hover::before {
+    background: #be4c96;
+}
+
+.element-item {
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.element-item:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.copyright {
+    background: url(../images/empireGaming/back/footerback.png) no-repeat center center;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 41px 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.copyright p {
+    padding: 0 20px;
+    margin-top: 5px;
+}
+
+footer {
+    position: relative;
+}
+
+.gotop {
+    position: fixed;
+    width: 74px;
+    height: 70px;
+    bottom: -37px;
+    right: 30px;
+    background: url(../images/empireGaming/logo/logoh.png) no-repeat center center;
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.gotop:hover {
+    opacity: 1;
+}
+
+path {
+    display: none;
+}
+
+.element-item {
+    width: 16.66%;
+    /*padding: 20px;*/
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*RWD設定*/
+
+@media screen and (max-width: 1800px) {
+    
+    /*業務範圍*/
+
+    .businesspic img {
+        max-width: 100%;
+    }
+
+    /*聯絡我們*/
+
+    .contactpic img {
+        max-width: 100%;
+    }
+
+    .contactpic::after {
+        top: 118px;
+    }
+
+    .contactpic {
+        padding-right: 60px;
+    }
+    .movepicp {
+        right: 39.5%;
+    }
+    .movepicb {
+        right: 52.5%;
+    }
+    
+}
+
+@media screen and (max-width: 1600px) {
+
+    /*banner*/
+
+    .banner {
+        top: -155px;
+    }
+    
+    /*業務範圍*/
+    
+    .businessbox ul {
+        margin-top: 35px;
+        padding-left: 0;
+    }   
+
+    .lightpic {
+        transform: scale(0.6);
+    }
+    .movepic.ligjtidea {
+        top: -80px;
+    }
+    .movepic.movepic1 {
+        top: 17%;        
+        transform: scale(0.8);
+    }
+    .movepic.movepic2 {
+        top: 49%;
+        right:0px;
+        transform: scale(0.8);
+    }
+    .movepic.movepic3 {
+        top: 64%;
+        transform: scale(0.8);
+    }
+    .movepicp {
+        right: 30.5%;
+        top: -15%;
+    }
+
+    .movepicb {
+        right: 47.5%;
+        top: -5%;
+    }
+    /*聯絡我們*/
+    .contactbox p {        
+        text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff, 0.5px 0.5px 0 #fff;
+    }
+    /*合作夥伴*/
+
+    .partnerbox {
+        padding-top: 45px;
+        margin-top: 0px;
+    }
+
+    .element-item {
+        width: 20%;
+        padding: 0;
+    }
+    .grid {
+        height: 721px;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    
+    /*關於我們*/
+
+    .logocolor {
+        margin: 22% 0 24% 5%;
+    }
+    
+    .about::before {
+        background-size: 470px;
+        background-position: top right;
+    }      
+
+    .aboutbox img {
+        top: -50px;
+    }
+
+    .aboutbox p {
+        padding: 0px 25px 25px 160px;
+    }
+
+    .aboutbox img {
+        width: 25%;
+        -webkit-filter: brightness(105%); /* Safari*/
+        filter: brightness(105%);
+    }
+
+    /*BANNER*/
+
+    .banner::after {
+        background-size: 400px;
+        background-position: top right;
+    }
+    .movepic.movepic1 {
+        transform: scale(0.6);
+    }
+
+    .movepic.movepic2 {
+        transform: scale(0.6);
+    }
+
+    .movepic.movepic3 {
+        right: 45%;
+        transform: scale(0.6);
+    }
+    
+    /*業務範圍*/
+
+    .title p {
+        font-size: 18px;
+    }
+    .containback {
+        background-size: 1000px;
+    }
+
+    .businessbox ul {
+        margin-top: 35px;
+        padding-left: 0;
+    }
+
+    .businessbox ul li {
+        padding: 25px 45px;
+    }
+
+    .businessbox ul li:first-child img {
+        width: 70%;
+    }
+
+    .businessbox ul li img {
+        width: 80%;
+    }
+
+    .diamod {
+        width: 65px;
+        height: 65px;
+        left: 34px;
+        top: 16px;
+    }    
+
+    .businessbox p {
+        font-size: 26px;
+        padding-left: 45px;
+    }
+
+    /*遊戲類別*/
+
+    .gamebox p {
+        padding: 10px;
+        font-size: 21px;
+    }
+
+    /*聯絡我們*/
+
+    .contactbox ul li img {
+        width: 10%;
+    }
+
+    .contactbox .diamod {
+        left: 31px;
+        top: -5px;
+    }
+
+    .contactbox p {
+        font-size: 32px;
+        text-shadow: none;
+    }
+
+    .contactpic img {
+        padding-bottom: 45px;
+    }       
+
+    .titlebox.contacttitle {
+        padding-top: 110px;
+    }
+
+    /*合作夥伴*/
+
+    .big-demo {
+        width: 80%;
+    }
+
+    .element-item {
+        width: 25%;
+    }
+    
+
+}
+
+
+@media screen and (max-width: 1199px) {
+
+    /*選單*/
+
+    ul.nav.navbar-nav {
+        justify-content: center;
+        padding: 15px 0px 0;
+    }
+
+    nav.navbar.navbar-default {
+        background: #ffffff7d;
+        transition: ease all 0.5s;
+    }
+
+    .navbarup {
+        height: 95px;
+        margin-top: -5px;
+        padding-top: 0;
+    }
+
+    .navbarup nav.navbar.navbar-default {
+        background: none;
+    }
+
+    /*關於我們*/
+
+    .logocolor {
+        margin: 22% 5% 20% 5%;
+    }
+
+    .about .container-fluid {
+        background-position: left 280px;
+    }
+
+    .aboutbox img {
+        width: 15%;
+    }
+
+    .about::before {
+        background-size: 400px;
+    }
+
+    .aboutbox p {
+        padding: 0px 60px 80px 220px;
+        
+    }
+
+    .aboutbox img {
+        left: 55px;
+    }
+
+    /*BANNER*/
+    /*
+    .banner::before {
+        left: -20%;
+    }*/
+
+    /*業務範圍*/
+
+    .businesspic {
+        padding-left: 15px;
+    }
+
+    .businessbox {
+        margin-top: 80px;
+    }
+
+    .businessbox p {
+        font-size: 26px;
+        padding-left: 35px;
+        margin: 0;
+    }
+
+    .businessbox ul li:first-child img, .businessbox ul li img {
+        width: 70%;
+    }
+
+    .diamod {
+        width: 50px;
+        height: 50px;
+        left: 36px;
+        top: 14px;
+    }
+
+    .businessbox ul li {
+        padding: 20px 45px;
+        width: 100%;
+    }
+
+    .businessbox ul li:nth-child(2), .businessbox ul li:nth-child(3) {
+        margin-left: 0;
+    }
+
+    .containback {
+        background-position: -279px -23px;
+    }
+
+    /*遊戲類別*/
+
+    .titlebox.gametitle {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .game {
+        padding: 30px;
+    }
+
+    .gamebox {
+        margin: 10px -7px;
+    }
+
+    /*聯絡我們*/
+
+    .contactbox .diamod {
+        left: 34px;
+        top: -3px;
+    }
+
+    .contactbox {
+        padding-top: 90px;
+    }
+
+    .contactbox p {
+        font-size: 26px;
+        padding-left: 35px;
+    }
+
+    .movepic.ligjtidea {
+        left: 36%;
+    }
+
+    .movepicp {
+        top: -25%;
+        transform: scale(0.8);
+    }
+
+    .movepicb {
+        top: -14%;
+        transform: scale(0.8);
+    }
+
+    /*合作夥伴*/
+
+    .element-item {
+        width: 25%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 991px) {
+
+    /*選單*/
+
+    .navbarup {
+        height: 92px;
+        padding-top: 0;
+    }
+    .navbarup ul.nav.navbar-nav {
+        padding: 10px 0 20px;
+    }
+
+    /*關於我們*/
+
+    .aboutbox p {
+        padding: 0px 60px 15px 175px;
+        margin-top: -15px;
+    }
+    .about .container-fluid {
+        background-position: left 400px;
+        background-size: 700px;
+    }
+
+    /*BANNER*/
+    .bannerlg {
+        display: none;
+    }
+
+    .bannersm {
+        display: block;
+    }
+    .banner {
+        top: -80px;
+    }
+
+
+    /*業務範圍*/
+    .titlebox {
+        padding-top: 85px;
+    }
+
+    .businesspic, .contactpic {
+        padding: 30px;
+    }
+
+    .businessbox {
+        margin-top: -60px;
+        margin-bottom: 60px;
+    }
+
+    .businessbox ul li {
+        padding: 20px 0px 20px 25px;
+    }
+
+    .businessbox p {
+        padding-left: 30px;
+    }
+
+    .serviceicon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .businessbox ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .businessbox ul li {
+        width: 400px;
+    }
+
+
+    .diamod {
+        left: 23px;
+    }
+
+    /*聯絡我們*/
+
+    .contcatlist {
+        display: inline-flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .contactbox {
+        justify-content: center;
+        padding-top: 0;
+        margin-top: -40px;
+        padding-bottom: 40px;
+        z-index: 99;
+        position: inherit;
+    } 
+
+    .contactpic {
+        margin-top: 0;
+    }
+
+    .contactbox .diamod {
+        left: 35px;
+        top: 0px;
+    }
+
+    .contactbox p {
+        font-size: 30px;
+    }
+    
+    .contactbox ul li:nth-child(2) p {
+        color: #cb2069;
+    }
+    .contactpic::after {
+        top: auto;
+        bottom: -119px;
+        background-position: right bottom;
+    }
+
+     .lightpic {
+        transform: scale(0.8);        
+    }
+    .movepic.ligjtidea {
+        top: 0;
+    }
+
+    .movepic.movepic1 {
+        transform: scale(0.8);
+        top: 0;
+        right: 49%;
+    }
+
+
+    .movepic.movepic3 {
+        right: 63%;
+        transform: scale(0.7);
+        bottom: -260px;
+    }
+
+    .movepicp {
+        top: 5%;
+        right: 27%;
+        transform: scale(1);
+    }
+    .movepicb {
+        top: 11%;
+        right: 45%;
+        transform: scale(1);
+    }
+
+    /*合作夥伴*/
+
+    .partnerbox .titlebox {
+        padding-top: 70px;
+    }
+
+    .big-demo {
+        width: 100%;
+        padding: 0 40px;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .button-group::before, .button-group::after {
+        width: 155px;
+    }
+
+    .button:last-child {
+        margin-right: -20px;
+    }
+
+    .button {
+        margin: 0 19px;
+    }
+
+    .element-item {
+        width: 33.3%;
+        padding: 20px;
+    }    
+
+   
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    /*選單*/
+
+    .navbarup .navbar-default .navbar-collapse, 
+    .navbarup .navbar-default .navbar-form {
+        background: #ffffffe0;
+    }
+    .navbar-header {
+        margin: 0 !important;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-style: none;
+        background: #ff9671; /* Old browsers */
+        background: -moz-linear-gradient(top, #ff9671 0%, #ffc75f 50%, #f9f871 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #ff9671 0%,#ffc75f 50%,#f9f871 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #ff9671 0%,#ffc75f 50%,#f9f871 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9671', endColorstr='#f9f871',GradientType=0 ); /* IE6-9 */
+        opacity: 0.8;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fe5596;
+    }
+
+    ul.nav.navbar-nav {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        padding: 10px 15px;
+    }
+
+    .navbar-default .navbar-nav > .active > a {
+        text-align: center;
+    }
+
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        border-style: none;
+        box-shadow: none;
+    }
+
+    .nav > li {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    .navbarup {
+        background: none;
+    }
+    .navbarup .navbar-header {
+        background: #ffffffe0;
+    }
+
+    /*關於我們*/
+
+    .about::before {
+        background-size: 300px;
+    }
+
+    .about .container-fluid {
+        background-position: left 415px;
+        background-attachment: fixed;
+    }
+
+    .aboutbox img {
+        left: 30px;
+    }
+
+    .aboutbox p {
+        padding: 0px 60px 15px 155px;
+    }
+
+    /*BANNER*/
+
+    .bannersm {
+        display: none;
+    }
+    /*
+    .banner::before {
+        background-size: 585px;
+        background-position: left bottom;
+    }
+    .banner::before {
+        display: none;
+    }
+   */
+    .banner {
+        top: -45px;
+    }
+    .banner::after, .contactpic::after {
+        display: none;
+    }
+
+    /*業務範圍*/
+
+    .containback {
+        background-size: 775px;
+        background-position: -279px 85px;
+        background-attachment: fixed;
+    }
+
+    /*遊戲類別*/
+    .game .col-xs-12 {
+        width: 50%;
+    }
+
+    /*聯絡我們*/
+
+    .contactbox ul li:nth-child(2) p {
+        color: #ff65a7;
+    }
+
+    .lightpic {
+        transform: scale(0.7);
+    }
+    .movepic.movepic3 {
+        right: 67%;
+    }
+
+    /*合作夥伴*/
+
+    .element-item {
+        width: 33.3%;        
+    }   
+
+    .button {
+        margin: 5px 55px;
+    }
+    .button-group {
+        display: block;
+        text-align: center;
+        padding-left: 30px;
+    }
+    .button:last-child {
+        margin-right: 55px;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 550px) {
+
+    /*關於我們*/
+
+    .about .container-fluid {
+        background-size: 513px;
+        background-position: left 470px;
+    }
+
+    .about::before {
+        background-size: 220px;
+    }
+
+    .aboutbox {
+        flex-direction: column;
+    }
+
+    .aboutbox p {
+        font-size: 16px;
+        margin-bottom: 0;       
+        padding: 30px 15px 0 15px;
+    }
+
+    .aboutbox img {
+        position: initial;
+        width: 30%;
+    }      
+
+
+    /*BANNER*/
+
+    .banner {
+        top: -62px;
+        padding-top: 30px;
+    }
+    .banner::after {
+        background-size: 150px;
+    }
+   
+    /*業務範圍*/
+
+    .title h3 {
+        font-size: 56px;
+    }
+
+    .title h3::before {
+        width: 100px;
+        height: 100px;
+    }
+
+    .title h3::after {
+        width: 55px;
+        height: 55px;
+    }
+
+    .title p {
+        font-size: 16px;
+    }
+
+    .title p::before {
+        width: 25px;
+        height: 25px;
+        left: 52px;
+        bottom: -5px;
+    }
+
+    .containback {
+        background-size: 784px;
+    }
+   
+    .businesspic, .contactpic {
+        padding: 15px;
+    }
+
+    .businessbox {
+        margin-top: -30px;
+        margin-left: 15px;
+    }
+
+    .businessbox p {
+        font-size: 21px;
+        padding-left: 15px;
+    }
+
+    .businessbox ul li {
+        width: 90%;
+    }
+
+    .businessbox ul li:first-child img, .businessbox ul li img {
+        width: 55%;
+    }
+
+    .diamod {
+        width: 45px;
+        height: 45px;
+        left: 26px;
+    }
+
+    .lightpic {
+        transform: scale(0.5)
+    }
+
+    .movepic.ligjtidea {
+        top: -70px;
+    }
+
+    .movepic.movepic1 {
+        transform: scale(0.5);
+        top: -40px;
+        right: 46%;
+    }
+
+    .movepic.movepic2 {
+        transform: scale(0.5);
+        right: 0px;
+        bottom: -5px;
+    }
+
+    .movepic.movepic3 {
+        transform: scale(0.5);
+        bottom: -50px;
+        right: 62%;
+    }
+
+
+    /*遊戲類別*/
+
+    .game .col-xs-12 {
+        width: 100%;
+    }
+    .game {
+        padding: 20px;
+    }
+
+
+    /*聯絡我們*/
+
+    .contactpic::after {
+        background-size: 355px;
+    }
+
+    .contactbox ul {
+        padding: 0;
+    }
+
+    .contactbox ul li:nth-child(2) {
+        padding: 3px 0 0 70px;
+    }      
+
+    .contactbox .diamod {
+        left: 33px;
+        top: -3PX;
+    }
+
+    .contactbox p {
+        font-size: 21px;
+    }
+
+    .movepicp {
+        top: 3%;
+        right: 26%;
+        transform: scale(0.8);
+    }
+
+    .movepicb {
+        top: 10%;
+        right: 43%;
+        transform: scale(0.8);
+    }
+
+
+    /*合作夥伴*/
+
+    .big-demo {
+        padding: 0;
+    }
+
+    .element-item {
+        width: 50%;
+        padding:0;
+    }   
+
+    .button-group::before, .button-group::after {
+        display: none;
+    }
+        
+    .button {
+        margin: 5px 30px;
+        outline: none;
+    }
+
+    .button:last-child {
+        margin-right: 30px;
+    }
+       
+    
+    /*FOOTER*/
+
+    .copyright {
+        flex-direction: column;
+    }
+
+    .copyright p {
+        text-align: center;
+    }
+
+    .copyright {
+        background-size: cover;
+    }
+
+    .gotop {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 400px) {
+   
+    /*關於我們*/
+
+    .aboutbox {       
+        padding-bottom: 50px;
+    }
+
+    /*BANNR*/
+
+    .banner {
+        top: -97px;
+        padding-top: 70px;
+    }
+
+    /*業務範圍*/
+
+    .title h3 {
+        font-size: 40px;
+    }       
+
+    .title h3::before {
+        width: 80px;
+        height: 80px;
+    }
+
+    .title h3::after {
+        width: 45px;
+        height: 45px;
+        left: 40px;
+    }
+
+    .title p {
+        font-size: 14px;
+        padding-left: 80px;
+    }
+
+    .title p::before {
+        width: 20px;
+        height: 20px;
+        left: 35px;
+        bottom: 2px;
+    }
+
+    .businessbox ul li {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .diamod {
+        left: 2px;
+    }         
+
+    .lightpic {
+        transform: scale(0.3);        
+    }
+    .movepic.ligjtidea {
+        left: 32%;
+    }
+
+    .movepic.movepic1 {
+        transform: scale(0.3);
+        top: 0px;
+        right: 37%;
+    }
+
+    .movepic.movepic2 {
+        transform: scale(0.3);
+        right: 0;
+    }
+
+    .movepic.movepic3 {
+        transform: scale(0.4);
+        bottom: -15px;
+        right: 55%;
+    }
+
+
+    /*遊戲類別*/
+
+    .game {
+        padding: 15px;
+    }
+
+    .titlebox.gametitle {
+        padding-top: 20PX;
+    }
+    /*聯絡我們*/
+
+    .contactbox {
+        padding-bottom: 15px;
+    }
+
+    .contactbox ul li img {
+        width: 11%;
+    }
+
+    .contactbox p, .businessbox p {
+        letter-spacing: 1px;
+    }
+
+    .movepicp {
+        top: 1%;
+        right: 23%;
+        transform: scale(0.6);
+    }
+
+    .movepicb {
+        top: 7%;
+        right: 40%;
+        transform: scale(0.6);
+    }
+
+    .titlebox.contacttitle {
+        padding-top: 80px;
+    }
+
+
+    /*合作夥伴*/
+    .partnerbox {
+        padding-top: 0;
+    }
+
+    .big-demo {
+        padding: 0px;
+    }
+
+    
+    .element-item img {
+        width: 150px;
+    }
+
+    .button {
+        margin: 5px 30px;
+    }    
+
+    
+    
+
+}

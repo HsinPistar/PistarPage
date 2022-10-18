@@ -1,0 +1,436 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="icon" href="images/xmasLuckyWheel/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/xmasLuckyWheel.css" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <title>Xmas Lucky Wheel</title>
+</head>
+<body>
+    <div class="webpage">
+    <div class="wrapper">
+       <!-- news中獎名單 -->
+        <div class="newsBox">
+            <div class="news">
+            <!-- 从这控制跑马灯显示隐藏 -->
+            <div class="newsTit">NEWS</div>
+            <marquee class="lunbo" direction="left" scrollamount="4" onmouseover="this.stop()" onmouseout="this.start()">
+                Congratulations to zww***3 for getting $20.40、
+                Congratulations to tyl***9 for getting $16.1 、
+                Congratulations to hry***8 for getting $4.50 、
+                Congratulations to aus***n for getting $18.1 、
+                Congratulations to hui***1 for getting $1.00 、
+                Congratulations to ron***1 for getting $662.1 、
+                Congratulations to jj7***9 for getting $3.60 、
+                Congratulations to 518***e for getting $646.8 
+            </marquee>
+        </div>
+    </div>
+        <div class="content">
+            
+            <div class="leftContent ">
+                <div class="wheelTitle"><img src="images/xmasLuckyWheel/titleEN.png" alt="" /><span class="logoLight"></span></div>
+                <div class="pcVisible">
+                    <div class="textW iconUser iconPic">
+                        <div class="h1"></div>
+                        <div class="elenew-gamejp-prize clearfix">
+                            <span id="totalPeople" class="number">6791</span>
+                        </div>
+                        <div class="h1">people played</div>
+                    </div>
+                    <div class="textW iconCoin iconPic">
+                        <div class="h1"></div> <br class="brblock">
+                        <div class="elenew-gamejp-prize clearfix">
+                            <input id="totalMoney" type="hidden" value="1860288">
+                            <span id="formatTotalMoney" class="number">$160,288.00</span>
+                        </div>
+                        <div class="h1"> has been sent</div>
+                    </div>
+                    <div class="textW gameTimes iconPic">
+                        <div class="h1">You can play </div>
+                        <span class="elenew-gamejp-prize">
+                            <em id="playTimes">0</em>
+                        </span>
+                        <div class="h1">times</div>
+                    </div>
+                    <div class="iconActtell">
+                        <a href="#" target="_blank" class="descBtn"><img src="images/xmasLuckyWheel/btn-descEN.png" alt="GameCheck" /></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- Game -->
+            <div class="gameBox">
+                <!-- isActive:Can play or not --->
+                <input type="hidden" id="isActive" value="false">
+                <button id="button" class="playBtn"></button>
+                <div class="arrow"><img src="images/xmasLuckyWheel/arrow.png" /></div>
+                <div class="rouletteBox">
+                    <div class="rouletteBorder"></div>
+                    <div id="roulette">
+                        <svg version="1.1" x="0px" y="0px"
+                             width="100%" height="100%" viewBox="-141 -4 800 800" enable-background="new -141 -4 800 800" xml:space="preserve">
+                             <defs>
+                                <linearGradient id="DarkGreen"
+                                        x1="0%" y1="0%"
+                                        x2="0%" y2="100%"
+                                        spreadMethod="pad">
+                                  <stop offset="0%"   stop-color="#385e33" stop-opacity="1"/>
+                                  <stop offset="50%" stop-color="#1f4929" stop-opacity="1"/>  
+                                  <stop offset="85%" stop-color="#0a2817" stop-opacity="1"/>
+                                </linearGradient>
+
+                                <linearGradient id="DarkGreen2"
+                                x1="100%" y1="0%"
+                                x2="0%" y2="0%"
+                                spreadMethod="pad">
+                          <stop offset="0%"   stop-color="#385e33" stop-opacity="1"/>
+                          <stop offset="50%" stop-color="#1f4929" stop-opacity="1"/>  
+                          <stop offset="85%" stop-color="#0a2817" stop-opacity="1"/>
+                        </linearGradient>
+
+                                <linearGradient id="LightGreen"
+                                        x1="0%" y1="0%"
+                                        x2="0%" y2="100%"
+                                        spreadMethod="pad">
+                                  <stop offset="0%"   stop-color="#476e34" stop-opacity="1"/>
+                                  <stop offset="50%" stop-color="#35602e" stop-opacity="1"/>
+                                  <stop offset="85%" stop-color="#113622" stop-opacity="1"/> 
+                                </linearGradient>
+
+                                <linearGradient id="LightGreen2"
+                                        x1="100%" y1="0%"
+                                        x2="0%" y2="0%"
+                                        spreadMethod="pad">
+                                  <stop offset="0%"   stop-color="#476e34" stop-opacity="1"/>
+                                  <stop offset="50%" stop-color="#35602e" stop-opacity="1"/>
+                                  <stop offset="85%" stop-color="#113622" stop-opacity="1"/> 
+                                </linearGradient>
+                            </defs>
+
+                        <g>
+                        <g>
+                        <path class="colorDG" d="M59.008,742.393L259,396L-87.368,595.976C-52.257,656.664-1.656,707.257,59.008,742.393z" style="fill: url(#DarkGreen)"/>
+
+
+
+                            </g>
+                        <g>
+                        <path class="colorLG" d="M259,796V396L59.008,742.393C117.831,776.456,186.119,796,259,796z" style="fill: url(#LightGreen)"/>
+
+
+
+                            </g>
+                        <g>
+                        <path class="colorDG" d="M259,796c72.871,0,141.136-19.584,199.976-53.64L259,396V796z" style="fill: url(#DarkGreen)"/>
+
+
+
+                            </g>
+                        <g>
+                        <path class="colorLG" d="M259,396l199.976,346.36c60.688-35.112,111.28-85.713,146.416-146.377L259,396z" style="fill: url(#LightGreen)"/>
+
+
+
+                            </g>
+                        <g>
+                        <path class="colorDG" d="M659,396H259l346.392,199.983C639.464,537.168,659,468.88,659,396z" style="fill: url(#DarkGreen)"/>
+
+
+
+                            </g>
+                        <g>
+                        <path class="colorLG" d="M605.367,196.024L259,396h400C659,323.128,639.415,254.864,605.367,196.024z" style="fill: url(#LightGreen)"/>
+
+
+
+                            </g>
+                        <g>
+                        <path class="colorDG" d="M458.991,49.608L259,396l346.367-199.976C570.248,135.335,519.648,84.744,458.991,49.608z" style="fill: url(#DarkGreen)"/>
+
+
+
+                            </g>
+                        <g>
+                        <path class="colorLG" d="M259-4v400L458.991,49.608C400.168,15.536,331.88-4,259-4z" style="fill: url(#LightGreen)"/>
+
+
+
+                            </g>
+                        <g>
+                        <path class="colorDG" d="M59.025,49.632L259,396V-4C186.128-4,117.864,15.584,59.025,49.632z" style="fill: url(#DarkGreen)"/>
+
+
+
+                            </g>
+                        <g>
+                        <path class="colorLG" d="M-87.392,196.008L259,396L59.025,49.632C-1.664,84.752-52.257,135.352-87.392,196.008z" style="fill: url(#LightGreen2)"/>
+
+
+
+                            </g>
+                        <g>
+                        <path class="colorDG" d="M-141,396h400L-87.392,196.008C-121.465,254.832-141,323.12-141,396z" style="fill: url(#DarkGreen2)"/>
+
+
+
+                            </g>
+                        <g>
+                        <path class="colorLG" d="M-87.368,595.976L259,396h-400C-141,468.872-121.416,537.136-87.368,595.976z" style="fill: url(#LightGreen2)"/>
+
+
+
+                            </g>
+                            </g>
+                        </svg>
+
+                        <ul class="rouletteItem">
+                            <li style="left:33%;top:9%; transform: rotate(-15deg);"><img transform="translate(189.57 30.24) rotate(28.45)" src="images/xmasLuckyWheel/items/item-01.png"></li>
+                            <li style="left:51%;top:9%; transform: rotate(15deg);"><img transform="translate(189.57 30.24) rotate(28.45)" src="images/xmasLuckyWheel/items/item-02.png"></li>
+                            <li style="left:66%;top:17%; transform: rotate(45deg);"><img transform="translate(223.2 51.6) rotate(46.45)" src="images/xmasLuckyWheel/items/item-03.png"></li>
+                            <li style="left:75%;top:32%; transform: rotate(75deg);"><img transform="translate(261.4 122.6) rotate(88.75)" src="images/xmasLuckyWheel/items/item-04.png"></li>
+                            <li style="left:75%;top:50%; transform: rotate(105deg);"><img transform="translate(82.9 242.2) rotate(202.75)" src="images/xmasLuckyWheel/items/item-05.png"></li>
+                            <li style="left:66%;top:65%; transform: rotate(135deg);"><img transform="translate(82.9 242.2) rotate(202.75)" src="images/xmasLuckyWheel/items/item-06.png"></li>
+                            <li style="left:51%;top:75%; transform: rotate(165deg);"><img transform="translate(248.1 195.1) rotate(116.75)" src="images/xmasLuckyWheel/items/item-07.png"></li>
+                            <li style="left:32%;top:75%; transform: rotate(-165deg);"><img transform="translate(116.3 260.2) rotate(197.75)" src="images/xmasLuckyWheel/items/item-08.png"></li>
+                            <li style="left:18%;top:65%; transform: rotate(-135deg);"><img transform="translate(154.1 261.2) rotate(179.75)" src="images/xmasLuckyWheel/items/item-09.png"></li>
+                            <li style="left:8%;top:50%; transform: rotate(-105deg);"><img transform="translate(194.3 254.2) rotate(164.75)" src="images/xmasLuckyWheel/items/item-10.png"></li>
+                            <li style="left:8%;top:32%; transform: rotate(-75deg);"><img transform="translate(226.3 229.1) rotate(137.75)" src="images/xmasLuckyWheel/items/item-11.png"></li>
+                            <li style="left:17%;top:17%; transform: rotate(-45deg);"><img transform="translate(264.1 163.1) rotate(114.75)" src="images/xmasLuckyWheel/items/item-12.png"></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mobileVisible mobileTxtBox">
+                <div class="leftContent mobileVisible">
+
+                    <div class="textW gameTimes iconPic">
+                        <div class="h1">You can play </div>
+                        <span class="elenew-gamejp-prize">
+                            <em id="playTimes">0</em>
+                        </span>
+                        <div class="h1">times</div>
+                    </div>
+                    <a href="/Home/Promotions" target="_blank" class="descBtn"><img src="images/xmasLuckyWheel/btn-desc.png" alt="活动说明" /></a>
+                    <div class="textW iconUser iconPic">
+                        <div class="h1"></div>
+                        <div class="elenew-gamejp-prize clearfix">
+                            <span id="totalPeople" class="number">6791</span>
+                        </div>
+                        <div class="h1">people played</div>
+                    </div>
+                    <div class="textW iconCoin iconPic">
+                        <div class="h1"></div>
+                        <div class="elenew-gamejp-prize clearfix">
+                            <input id="totalMoney" type="hidden" value="1860288">
+                            <span id="formatTotalMoney" class="number">$1,860,288.00</span>
+                        </div>
+                        <div class="h1">dollars has been sent</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+      <div class="modalBox">
+            <div>
+                <div class="modalBoxContent">
+                    <!-- 中奖内容 -->
+                    <div id="win" class="awardBox win">
+                        <div id="starshine">
+                            <div class="template shine"></div>
+                        </div>
+                        <div class="awardBoxtwt">
+                        <div class="textContent">
+                            <h2>WOW~~!</h2>
+                            <p>Get<span class="awardText">$<span id="money">20</span></span></p>
+                        </div>
+                        <button class="closeBtn"><p>Get More</p></button>
+                       </div>
+                       <div class="lightingBox">
+                          <div class="lighting lighting1"></div>
+                          <div class="lighting lighting2"></div>
+                          <div class="lighting lighting3"></div>
+                          <div class="lighting lighting4"></div>
+                          <div class="lighting lighting5"></div>
+                        </div>
+                    </div>
+                    <!-- 未中奖内容 -->
+                    <div id="normal" class="awardBox" >
+                        <div class="awardBoxtwt">
+                        <div class="textContent">
+                            <h2>So pity~</h2>
+                            <p>Try Again!</p>
+                        </div>
+                        <button class="closeBtn"><p>Play again<p></button>
+                        </div>
+                        <div class="flowersnowBox">
+                            <div class="flowersnow flowersnow1"></div>
+                            <div class="flowersnow flowersnow2"></div>
+                            <div class="flowersnow flowersnow3"></div>
+                            <div class="flowersnow flowersnow4"></div>
+                            <div class="flowersnow flowersnow5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="snowflyBox">
+        <ul>
+            <li class="snowfly snowfly1"></li>
+            <li class="snowfly snowfly2"></li>
+            <li class="snowfly snowfly3"></li>
+        </ul>
+
+    </div>    
+    <div class="projectBox">
+        <ul>
+            <li class="projects projects0" ></li>
+            <li class="projects projects1" ></li>
+            <li class="projects projects2" ></li>
+            <li class="projects projects3" ><span class="goldLight"></span><span class="goldLight goldLight1"></span></li>
+            <li class="projects projects4" ></li>
+        </ul>
+
+    </div>
+</div>
+
+    <script>   
+
+        results = new Array(2);
+        results[0] = $('#win');
+        results[1] = $('#normal');
+        function randomArr(start, end) {
+            return Math.round(start + Math.random() * (end - start))
+        }
+        var radis = 30,  // 每个扇形区域的度数
+            n = randomArr(0, 360 / radis),  // 计算随机中奖的位置
+            initRadis = 720,   // 初始转动的角度
+            time = 8 * 1000,    // 转动时间
+            once = true,    // 限制一个转动周期只能点击一次
+            totalRadis = initRadis + radis * n + radis / 2;  // 转动角度计算公式
+        $('#button').on('click', function () {
+            //重新計算角度
+            n = randomArr(0, 360 / radis);
+            totalRadis = initRadis + radis * n + radis / 2; 
+            console.log( n, totalRadis );
+            if (once) {
+                once = false;
+                $('#roulette').css({
+                    'transform': 'rotate(' + totalRadis + 'deg)',
+                    'transition': 'transform 7.5s cubic-bezier(0,.47,.31,1.03)'
+                });
+                $('.rouletteBorder').css({
+                    //'background': ' url("images/xmasLuckyWheel/rouletteBorderActive.png") no-repeat',
+                    'background-size': 'contain',
+                });
+                setTimeout(function () {
+                    once = true;
+                    $('.modalBox').css({
+                        'display': 'flex'
+                    });
+                    //隨機出現中獎或未中獎區塊
+                    resultsBox = Math.floor(Math.random() * results.length);
+                    results[resultsBox].show(function () {
+                         var moneyArray = ['0.5', '0.5', '0.5', '0.8', '1', '1', '2', '20'];
+                        resultsMoney = Math.floor(Math.random() * moneyArray.length);
+                        $('#money').text(moneyArray[resultsMoney]);
+                    });
+                    $('#roulette').css({
+                        'transform': 'rotate(' + 0 + 'deg)',
+                        'transition': 'none'
+                    });
+                    $('.rouletteBorder').css({
+                        'background': ' url("images/xmasLuckyWheel/rouletteBorder.png") no-repeat',
+                        'background-size': 'contain',
+                    });
+                }, time)
+            }
+            $('.closeBtn').click(function (){
+                results[resultsBox].hide();
+            });
+        })
+        //點擊空白處選單消失
+        $(function () {
+            $(document).click(function (event) {
+                var menu = $('.textContent');   // 設定目標區域
+                if (!menu.is(event.target) && menu.has(event.target).length === 0) {
+                    $('.modalBox').hide();
+                    $('.awardBox').hide();
+                }
+            });
+        })
+
+        
+        //背景閃爍星星
+        $(function() {
+            var body = $('#starshine'),
+                template = $('.template.shine'),
+                stars =  300,
+                sparkle = 20;
+            var size = 'small';
+            
+            var createStar = function() {
+            template.clone().removeAttr('id').css({
+                top: (Math.random() * 100) + '%',
+                left: (Math.random() * 100) + '%',
+                webkitAnimationDelay: (Math.random() * sparkle) + 's',
+                mozAnimationDelay: (Math.random() * sparkle) + 's'
+            }).addClass(size).appendTo(body);
+            };
+
+            for(var x = 0; x < stars; x++) {
+                if(x % 2 === 0) {
+                    size = 'small';
+                } else if(x % 3 === 0) {
+                    size = 'medium';
+                } else {
+                    size = 'large';
+                }
+                createStar();
+            }
+
+        });
+/*
+        const body = document.querySelector("#starshine");
+        const template = document.querySelector(".template.shine");
+        console.log(template);
+        let stars =  300;
+        let sparkle = 20;
+        let size = "small";
+
+        for(var x = 0; x < stars; x++) {
+                if(x % 2 === 0) {
+                    size = 'small';
+                } else if(x % 3 === 0) {
+                    size = 'medium';
+                } else {
+                    size = 'large';
+                }
+                createStar();
+            }
+
+
+        function createStar() {
+
+            template = template.assign();
+            template.removeAttr('id').css({
+                top: (Math.random() * 100) + '%',
+                left: (Math.random() * 100) + '%',
+                webkitAnimationDelay: (Math.random() * sparkle) + 's',
+                mozAnimationDelay: (Math.random() * sparkle) + 's'
+            }).addClass(size).appendTo(body);
+
+        }*/
+
+
+        // 手机呈现顺序排列   
+       
+    </script>
+
+</body>
+</html>

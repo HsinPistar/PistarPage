@@ -1,0 +1,1589 @@
+﻿* {
+    text-decoration: none;
+    outline: none;
+    box-sizing:border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", "微软雅黑体",'宋体', arial;
+    font-size: 16px;
+    background: url('../images/xmasLuckyWheel/bg.jpg') no-repeat top left #7a0712;
+    background-size: cover;
+    color:#fff;
+}
+.modalBoxContent::before {    
+    content: "";
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    transition: all ease-in-out 0.3s;
+}
+
+ul, li,p {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: bold;
+    background: initial;
+}
+.pcVisible {
+    display:block;
+    position: relative;
+}
+.pcVisible::before{
+    content: " ";
+    background-color: #fff;
+    position: absolute;
+    width: 502px;
+    height: 158px;
+    opacity: 0.15;
+    border-radius: 20px;
+    left: 15px;
+    top: -20px;
+}
+.pcVisible::after{
+    content: " ";
+    background: url('../images/xmasLuckyWheel/tellPic.png') no-repeat;
+    position: absolute;
+    width: 65px;
+    height: 45px;
+    right: -16px;
+    top: 87px;
+}
+.mobileVisible {
+    display: none;
+}
+.webpage {    
+    width: 100vw; 
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.wrapper {
+    padding: 16px 0;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    height: 100vh;
+}
+.newsBox {
+    padding-bottom:-25px;
+}
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.newsTit {
+    position: relative;
+    padding:0 20px 0 78px;
+    color: #fffb40;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 48px;
+}
+
+.newsTit::before{    
+    content: "";
+    background: url(../images/xmasLuckyWheel/icon-bullhorn.png) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    width: 56px;
+    height: 65px;
+    left: 10px;
+    top: -10px;
+}
+
+marquee {
+    width: calc( 95% - 160px);
+    overflow: hidden;
+    line-height: 48px;
+    height: 48px;
+    font-size: 16px;
+    color: #fff;
+}
+/*左边文字*/
+.wrapper .content {
+    display:flex;
+    flex-direction:row;
+    position: relative;
+    z-index: 9;
+}
+.leftContent {
+    width: 81%;
+    padding-left: 40px;
+}
+.wheelTitle {
+    margin-bottom:30px;
+    position: relative;
+}
+.wheelTitle img {
+    width:100%;
+    height:auto;
+    max-width:545px;
+}
+.wheelTitle::before, .wheelTitle::after, .logoLight::before, .playBtn::before {
+    content: " ";
+    background: url(../images/xmasLuckyWheel/logoLight.png) no-repeat center center;
+    width: 100%;
+    max-width: 72px;
+    height: 68px;
+    background-size: contain;
+    position: absolute;
+    left: 33%;
+    top:2%;
+    opacity: 0;
+    animation: rotateLighting ease-in-out;
+    animation-duration: 2.5s;
+    animation-iteration-count:infinite;
+    animation-delay: 0.1s;
+}
+.wheelTitle::after {
+    max-width: 36px;
+    left: 52%;
+    top: 63.5%;
+    animation-delay: 0.6s;
+}
+.logoLight::before {
+    max-width: 60px;
+    left: 81%;
+    top:35%;
+    animation-delay: 1.1s;
+}
+@keyframes rotateLighting {
+    0% {
+        width: 100%;
+    }
+    50% {
+       transform: rotate(0);
+       opacity: 0;
+       width: 20%;       
+       mix-blend-mode: hard-light;    
+    }
+
+    85% {        
+        transform: rotate(360deg);
+       opacity: 1;
+       width: 100%;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+.textW {
+    display: flex;
+    font-size: 24px;
+    padding-left: 117px;
+    line-height: 38px;
+    margin-bottom: 36px;
+    color: #fff;
+    letter-spacing: 2px;
+    position: relative;
+}
+.textW.gameTimes.iconPic {
+    padding-top: 40px;
+    text-shadow: 2px 2px 2px #000;
+}
+.elenew-gamejp-prize, #playTimes {
+    color: #fffb40;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.iconPic::before {    
+    content: " ";
+    background: url(../images/xmasLuckyWheel/icon-player.png) no-repeat;
+    width: 52px;
+    height: 63px;
+    position: absolute;
+    left: 43px;
+    top: -11px;
+}
+
+/*.iconUser.iconPic {
+    background: url(../images/xmasLuckyWheel/icon-player.png) no-repeat;
+}*/
+.iconCoin.iconPic::before {
+    background: url('../images/xmasLuckyWheel/icon-coin.png') no-repeat;
+    top: -3px;
+    left: 45px;
+}
+.gameTimes.iconPic::before  {
+    background: url('../images/xmasLuckyWheel/icon-game.png') no-repeat;
+    margin-top: 45px;
+    width: 62px;
+    height: 60px;
+}
+.iconActtell {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 12px 24px;
+}
+.descBtn {
+    /*background: url(../images/xmasLuckyWheel/btn-desc-hover.png) no-repeat right center;
+    width: 100%;*/
+}
+.descBtn img {
+    transition: all .2s ease-in-out;
+    opacity: 1;
+}
+.descBtn:hover img {
+    filter: brightness(0.7);
+    transform: rotate(15deg) scale(1.07);
+}
+/*右边转盘*/
+.gameBox {
+    margin: 0 auto;
+    position: relative;
+    display: table;
+    width:100%;
+    padding-top: 72px;
+}
+
+.arrow {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%);
+    outline: none;
+    cursor: pointer;
+    top: 23px;
+}
+#button {
+    height: 212px;
+    width: 206px;
+    font-size: 20px;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-size: contain;
+}
+.playBtn {
+    background: url('../images/xmasLuckyWheel/play-now.png') no-repeat;
+    transition:all .2s linear;
+}
+.playBtn::before {
+    max-width:72px;
+    left: 56%;
+    top: 26%;
+    animation-delay: 1.6s;
+}
+.playBtn:hover {
+    background: url('../images/xmasLuckyWheel/play-now-hover.png') no-repeat;
+}
+.playBtn:active, .playBtn:focus {
+    background: url('../images/xmasLuckyWheel/play-now-active.png') no-repeat;
+    cursor: not-allowed;
+}
+.rouletteBox {
+    margin: 0 auto;
+    width: 100%;
+    height: 110vw;
+    max-width: 538px;
+    max-height: 538px;
+    position: relative;
+    z-index: 1;
+}
+/*.rouletteBox:before {
+    content: '';
+    position:absolute;
+    bottom:-130px;
+    background: url('../images/xmasLuckyWheel/wheel-bottom.png') no-repeat;
+    background-size:contain;
+    width:100%;
+    height:356px;
+    max-width:538px;
+}*/
+.rouletteBorder {
+    background: url('../images/xmasLuckyWheel/rouletteBorder.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: calc( 100% + 60px);
+    height: calc( 100% + 60px);
+    left: -25px;
+    top: -20px;
+    z-index: 1;
+}
+#roulette {
+    width: 100%;
+    height: 100vw;
+    max-height:538px;
+    transition: transform 3s cubic-bezier(0.33, 0.66, 0.66, 1);
+    position: relative;
+}
+#roulette .rouletteItem li {
+    position: absolute;
+}
+#roulette .rouletteItem li img {
+    width: 100%;
+    height: auto;
+    max-width: 90px;
+}
+
+.rouletteItem::before {
+    content: "";
+    background: url(../images/xmasLuckyWheel/darkpic.png) no-repeat center center;
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    left: -23px;
+    top: -22px;
+    mix-blend-mode: soft-light;
+    opacity: 0.5;
+}
+
+.colorDG {
+    fill:#2b532f;
+}
+.colorLG {
+    fill:#466d34;
+}
+.colorP {
+    fill: #b41b75;
+}
+.colorY {
+    fill: #ffcc1d;
+}
+.colorR {
+    fill: #ff3d3d;
+}
+.colorW {
+    fill: #ededed;
+}
+
+/*彈出視窗*/
+.modalBox {
+    display: none;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+}
+.modalBox > div {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    animation: openBg .1s alternate;
+}
+.modalBoxContent {
+    background: url('../images/xmasLuckyWheel/award/award-bg2.png') no-repeat center;
+    background-size: cover;
+    background-position-y: center;
+    width: 100%;
+    height: 100vh;
+    animation-delay: 2s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: openBgShine .2s alternate;
+    margin: 0 auto;
+}
+.modalBoxContent ul {
+    position: relative;
+}
+.modalBoxContent ul li{
+    position: absolute;
+}
+@keyframes openBg {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes openBgShine {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        background-size: 0;
+    }
+    20% {
+        transform: scale(0);
+        opacity: 0;
+        background-size: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        background-size:cover;
+    }
+}
+
+.snowfly {
+    background: url(../images/xmasLuckyWheel/snowfly.png)no-repeat center;
+    width: 1500px;
+    /*max-width: 100%;*/
+    height: 1500px;
+    position: absolute;
+    top:0;
+    right: 0;
+    overflow: hidden;
+    z-index: 8;   
+    pointer-events: none;
+    opacity: 0;
+    animation: snowFly;
+    animation-iteration-count:infinite;
+
+}
+.snowfly.snowfly1 {
+    animation-duration: 22s;
+} 
+.snowfly.snowfly2 {
+    animation-duration: 25s;
+    animation-delay: 5s;
+    transform: rotateY(180deg);
+}
+.snowfly.snowfly3 {
+    animation-duration: 28s;
+    animation-delay: 10s;
+    transform: rotateX(180deg);
+}
+
+@keyframes snowFly {
+    0% {
+       right: 0;
+       top: 0;
+       opacity: 0;
+    }
+    30%{
+        opacity: 0.3;
+    }   
+    100% {        
+        right: 80vw;
+        top: 100vh;
+        opacity: 0.8;
+    }
+}
+/*未中獎畫面*/
+.awardBox {
+    background: url(../images/xmasLuckyWheel/award/snowman_1.png) no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    max-width: 702px;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+    animation: jumpAct 0.5s ;
+    animation-iteration-count:1;
+    
+}
+.awardBox::before {
+    content: "";
+    background: url(../images/xmasLuckyWheel/award/snowman_2.png) no-repeat center;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    background-size: contain !important;
+    position: absolute;
+    top: 15vh;
+    left: 330px;
+    z-index: 9;
+    pointer-events: none;
+    animation: GOAct 1s ;
+    animation-iteration-count:1;
+}
+.awardBoxtwt {
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.awardBox .awardBoxtwt {
+    /*text-align: center;
+    padding: 80px 120px 24px 120px;*/
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    /* padding-top: 32vh;
+    margin: 25px -20px 0 0;*/
+    position: relative;
+    z-index: 99;    
+}
+.awardBox .textContent h2 {
+    font-size: 60px;
+    font-weight: bolder;
+    letter-spacing: 8px;
+    color:#d61f12;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.733);
+    margin-bottom: 25px;
+    animation: jumpAct 0.5s ;
+    animation-delay: 0.3s;
+}
+
+.awardBox .textContent p {
+    font-size: 30px;
+    color: #cc942a;
+    line-height: 30px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    animation: jumpAct 0.5s ;
+    animation-delay: 0.6s;
+}
+.closeBtn {
+    /*position: absolute;
+    right: 38%;
+    top: 57%;*/
+    color: #20396a;
+    background:linear-gradient(330deg, #c0861a 20%, #ffff7d 30%, #f3a62a 65%, #ffff82 75%);
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 36px;
+    letter-spacing: 2px;
+    padding: 10px 25px;
+    border: 1px solid #fcd262;
+    border-radius: 30px;
+    box-shadow: 2px 2px 8px #202020;
+    transition: all .8s ease-in-out;
+    margin-top: 40px; 
+    animation: jumpAct 0.5s ;
+    animation-delay: 0.9s;  
+}
+.awardBox .closeBtn p {
+    background: linear-gradient(330deg, #243f76 20%, #12203c 80% );
+    background: -webkit-linear-gradient(330deg, #243f76 20%, #12203c 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bolder;
+    font-family: "Microsoft YaHei", "微软雅黑体",'宋体', arial;
+}
+.closeBtn:hover, .awardBox .closeBtn:hover {
+    background:linear-gradient(330deg, #ffff82 20%, #c0861a 30%, #ffff7d 65%, #f3a62a 75%);
+}
+
+.flowersnow {
+    background: url(../images/xmasLuckyWheel/award/snowflower.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    animation: snowFlower 2s ;
+    animation-iteration-count:infinite;
+}
+.flowersnow.flowersnow1 {    
+    width: 103px;
+    height: 106px;
+    background-size: cover;
+    position: absolute;
+    left: 120%;
+    top: 50%;     
+}
+.flowersnow.flowersnow2 {    
+    width: 60px;
+    height: 60px;
+    left: 125%;
+    top: 45%; 
+    animation-delay: 0.5s;
+}
+.flowersnow.flowersnow3 {    
+    width: 30px;
+    height: 30px;
+    left:115%;
+    top: 45%;    
+    animation-delay: 0.8s;
+}
+.flowersnow.flowersnow4 {    
+    width: 120px;
+    height: 120px;
+    left:5%;
+    top: 65%;    
+    animation-delay: 0.2s;
+}
+.flowersnow.flowersnow5 {    
+    width: 40px;
+    height: 40px;
+    left:25%;
+    top: 60%;    
+    animation-delay: 1s;    
+}
+@keyframes snowFlower {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        transform:translateY(1%);
+    }
+    60% {
+        transform: scale(1);
+        opacity: 1;     
+    }
+    100% {        
+        opacity: 0;
+        transform:translateY(10%);
+         
+    }
+}
+
+@keyframes jumpAct {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }    
+    80% {     
+        transform: scale(1.3);   
+        opacity: 1;
+    }
+    100% {     
+        transform: scale(1);   
+        opacity: 1;
+    }
+}
+@keyframes GOAct {
+    0% {        
+        opacity: 0;
+    }  
+    30%{
+        transform: translateX(5%);
+    }
+    
+    100% {     
+        transform: translateX(0%);   
+        opacity: 1;
+    }
+}
+
+/*中獎*/
+.awardBox.win {
+    background: url('../images/xmasLuckyWheel/award/xmasman_1.png') no-repeat center center;
+    background-size: contain;    
+}
+.awardBox.win::before {
+    background: url(../images/xmasLuckyWheel/award/xmasman_2.png) no-repeat;
+    width: 160%;
+    max-width: 160%;    
+    top: 38vh;
+    left: -85px;
+      
+}
+.awardBox.win .textContent h2 {
+    /*background: linear-gradient(270deg, #c0861a 20%, #ffff7d 30%, #f3a62a 65%, #ffff82 75% );
+    background: -webkit-linear-gradient(270deg, #c0861a 20%, #ffff7d 30%, #f3a62a 65%, #ffff82 75%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;*/
+    color: #fff815;
+    letter-spacing:3px;
+}
+
+.awardText {
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 2px;
+    padding: 0 8px;
+}
+.awardBox.win .closeBtn p {
+    background: linear-gradient(330deg, #f6002b 20%, #56030a 80% );
+    background: -webkit-linear-gradient(330deg, #f6002b 20%, #56030a 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;    
+}
+
+
+/*星星*/
+#starshine {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    overflow: hidden;
+    pointer-events: none;
+}
+.shine {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url('../images/xmasLuckyWheel/award/star.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden;
+    z-index: 2;
+    color: tansparent;
+    -moz-opacity: 0.0;
+    opacity: 0.0;
+    animation: glitter 3s linear -3s infinite normal;
+    -webkit-animation: glitter 3s linear -3s infinite normal;
+    -moz-animation: glitter 3s linear -3s infinite normal;
+    -ms-animation: glitter 3s linear -3s infinite normal;
+    -o-animation: glitter 3s linear -3s infinite normal;
+}
+.shine.small {
+    width: 20px;
+    height: 20px;
+}
+.shine.medium {
+    width: 50px;
+    height: 50px;
+}
+.shine.large {
+    width: 100px;
+    height: 100px;
+}
+
+@-webkit-keyframes glitter {
+    0% {
+        -webkit-transform: scale(0.3) ;
+        opacity: 0;
+    }
+
+    25% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        -webkit-transform: scale(0.2);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(0.3);
+        opacity: 0;
+    }
+}
+
+.lighting {
+    background: url(../images/xmasLuckyWheel/award/light.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 108px;
+    height:79px;
+    top:25vh;
+    left: 65vw;
+    mix-blend-mode: color-dodge;
+    animation: glitter;
+    animation-iteration-count:infinite;
+}
+.lighting.lighting1 {    
+    top:27%;
+    left: 68%;
+    animation: glitter 1s linear -3s infinite normal;
+}
+.lighting.lighting2 {    
+    top:19%;
+    left: 34%;
+    animation: glitter 1s linear -3s infinite normal;
+    animation-delay: 0.4s;
+}
+.lighting.lighting3 {    
+    top:44%;
+    left: 9%;
+    animation: glitter 1s linear -3s infinite normal;
+    animation-delay: 0.8s;
+}
+.lighting.lighting4 {    
+    top:65%;
+    left: 15%;
+    animation: glitter 1s linear -3s infinite normal;
+    animation-delay: 1.2s;
+}
+.lighting.lighting5 {    
+    top:64%;
+    left: 51%;
+    animation: glitter 1s linear -3s infinite normal;
+    animation-delay: 1.6s;
+}
+
+
+.projects {       
+    background-size:contain;
+    position: absolute;
+    overflow: hidden;
+    animation-duration: 30s; 
+    animation-iteration-count:infinite; 
+    animation-direction: alternate;  
+}
+.projects0 {   
+    background: url(../images/xmasLuckyWheel/ball.png) no-repeat center center;
+    width: 485px;
+    height: 638px;
+    right: -7.5vw;
+    top: -7vh;
+    z-index: -9;
+    animation: screemmask2;
+    animation-delay: 2s; 
+    animation-duration: 30s; 
+    animation-iteration-count:infinite; 
+    animation-direction: alternate;      
+}
+.projects1 {   
+    background: url(../images/xmasLuckyWheel/project1.png) no-repeat center center;    
+    width: 1445px;
+    height: 207px;
+    left: -3vw;
+    bottom: -15vh; 
+    z-index: 3;   
+    animation: screemmask2;
+    animation-duration: 30s; 
+    animation-iteration-count:infinite; 
+    animation-direction: alternate;
+}
+.projects2 {   
+    background: url(../images/xmasLuckyWheel/project2.png) no-repeat center center;    
+    width: 1742px;
+    height: 380px;   
+    left: -1.8vw;
+    bottom: -13vh;
+    z-index: 2;
+    animation: screemmask;
+    animation-delay: 2s;
+    animation-duration: 40s; 
+    animation-iteration-count:infinite; 
+    animation-direction: alternate;
+       
+}
+.projects3 {   
+    background: url(../images/xmasLuckyWheel/project3_1.png) no-repeat center center;
+    background-size: contain;   
+    width: 562px;
+    height: 639px;    
+    left: 9.3vw;
+    bottom: -10vh;   
+    animation: manPose;
+    animation-delay: 4s;
+    animation-duration: 20s; 
+    animation-iteration-count:infinite; 
+}
+.projects3::before {
+    content: " ";
+    background: url(../images/xmasLuckyWheel/project3_2.png) no-repeat center center;
+    background-size: contain;
+    width: 180px;
+    height: 90px;    
+    left: 6%;
+    bottom: 43%;
+    position: absolute; 
+    animation: manHu;
+    animation-iteration-count:infinite;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+}
+.projects3::after {
+    content: " ";
+    background: url(../images/xmasLuckyWheel/eye.png) no-repeat center center;
+    background-size: contain;   
+    width: 35px;
+    height: 20px;    
+    left: 18.5%;
+    bottom: 56%;
+    position: absolute; 
+    animation: manEye;
+    animation-iteration-count:infinite;
+    animation-duration: 3s;
+
+}
+.projects4 {   
+    background: url(../images/xmasLuckyWheel/project4.png) no-repeat center center;
+    background-size: contain;    
+    width: 866px;
+    height: 611px;    
+    left: -4.5vw;
+    bottom: -22vh;  
+    z-index: -1;   
+    animation: screemmask2;
+    animation-delay: 6s; 
+    animation-duration: 30s; 
+    animation-iteration-count:infinite; 
+    animation-direction: alternate;
+}
+.goldLight::before, .goldLight::after {
+    content:"";
+    background: url(../images/xmasLuckyWheel/logoLightB.png) no-repeat center center;
+    width: 72px;
+    height: 68px;
+    position: absolute;
+    right: 9%;
+    bottom: 32%; 
+    animation: glitter 2s linear -3s infinite normal;
+    opacity: 0;
+    mix-blend-mode:overlay;
+}
+.goldLight::after {
+    right: 9%;
+    bottom: 32%;
+    animation-delay: 0.3s;
+}
+.goldLight.goldLight1::after {
+    right: 53%;
+    bottom: 42%;
+    animation-delay: 0.8s;
+}
+.goldLight::before {
+    right: 25%;
+    bottom: 40%;
+    animation-delay: 1s;
+
+}
+.goldLight.goldLight1::before {
+    right: 43%;
+    bottom: 41%;
+    animation-delay: 1.5s;
+}
+
+
+@keyframes manHu {
+    
+    5%{
+        transform: translateY(1%);
+    }
+    7%{
+        transform: translateY(0);
+    }
+    9%{
+        transform: translateY(1%);
+    }
+    11%{
+        transform: translateY(0);
+    }
+    54%{
+        transform: translateY(0);
+    }
+    55% {     
+        transform: translate(0%,0%) rotate(7deg);
+    }  
+    57% {   
+        transform: translate(0%,0%) rotate(-7deg);
+    }
+    59%{
+        transform: translate(0%,0%) rotate(7deg);
+    }
+    61%{
+        transform: translate(0%,0%) rotate(-7deg);
+    }
+    63%{
+        transform: translate(0%,0%) rotate(0);
+    }  
+}
+@keyframes manPose {
+    
+    0% {     
+        transform:scale(1) rotate(0deg) translateY(0%) translateX(0%);
+        transform-origin: 0%,70%;
+    }  
+    10% {
+        transform: rotate(10deg) translateY(5%);
+    }
+    12% {
+        transform: rotate(10deg) translateY(-3%);
+    }
+    15%{
+        transform: rotate(10deg) translateY(0%) translateX(5%);
+    }
+    25%{
+        transform: rotate(0deg) translateY(-10%) translateX(0%);
+    }
+    50%{
+        transform: rotate(0deg)translateY(-3%); 
+    }        
+    65%{
+        transform: rotate(-10deg) translateY(-8%);
+    }
+    75%{
+        transform: rotate(2deg) ;
+    }
+    77%{
+        transform: rotate(0deg) translateY(-15%);
+    }
+    79%{
+        transform: rotate(0deg) translateY(8%);
+    }
+    87%{
+        transform: rotate(0deg) translateY(-2%);
+    }
+    
+}
+
+@keyframes manEye {
+    
+    0% {     
+        opacity: 1;
+    }  
+    5%{
+        opacity: 0;
+    }
+    7%{
+        opacity: 1;
+    }
+    9%{
+        opacity: 0;
+    }
+    11%{
+        opacity: 1;
+    }
+}
+@keyframes screemmask {
+    
+    0% {     
+        transform:scale(1) ;
+    }  
+    30% {
+        transform:scale(1.03) translateX(-3%) ; 
+        filter: blur(5px);   
+    }
+    
+}
+@keyframes screemmask2 {
+    
+    0% {     
+        transform:scale(1) ;
+    }  
+    30% {
+        transform:scale(1.03) translateX(3%) ; 
+        filter: blur(3px);   
+    }
+    
+}
+
+
+
+/*---RWD-----1199-----------------------------------------------*/
+
+@media(max-width:1199px){
+    .textW {        
+        text-shadow: 2px 2px 2px #000;
+    }
+    .pcVisible::before {        
+        height: 225px;
+    }
+    .textW.gameTimes.iconPic {
+        padding-top: 0;
+    }
+    .gameTimes.iconPic::before {       
+        margin-top: 0;
+    }
+    .pcVisible::after {        
+        top: 191px;
+    }
+    .textW {
+        font-size: 21px;
+    }
+    #button {        
+        top: calc(50% - 15px);
+    }
+
+    .wheelTitle::after {        
+        /*top: 51.5%;*/
+    }
+    .projects0 {
+        display: none;
+    }
+    
+    .projects1 {
+        width: 1445px;
+        left: 5%;
+        bottom: -12%;
+    }
+    .projects2 {       
+        width: 1000px;
+        left: 0px;
+    }
+    .projects3 {
+        bottom: -15%;
+        width: 450px;
+    }
+    .projects3::before {        
+        width: 120px;
+        left: 10%;
+        bottom: 43.5%;
+    }
+    .projects3::after {
+        bottom: 54%;
+    }
+    .projects4 {
+        width: 775px;
+        left: -15%;
+        bottom: -24%;
+    }
+}
+
+/*---RWD-----1024-----------------------------------------------*/
+
+@media(max-width:1024px) {
+
+    .rouletteBox {
+        max-width:400px;
+    }
+    .rouletteBox:before {
+        content: '';
+        bottom: -60px;
+    }
+    .rouletteItem::before {        
+        width: 115%;
+        height: 115%;
+        background-size: contain;
+    }
+    #roulette {
+        max-height: 400px;        
+    }    
+    #roulette .rouletteItem li img {
+        max-width: 60px;
+    }
+    
+    .iconPic::before , .iconCoin.iconPic::before, .gameTimes.iconPic::before  {
+       background-size: contain; 
+       width: 50px;
+    }
+    .iconActtell .descBtn img {
+        width: 80%;
+    }
+    .leftContent {
+        width: 100%;
+        padding-left: 20px;
+    } 
+    #button {  
+        width: 180px;      
+        top: calc(50% - 40px);
+    }
+
+   
+
+    .flowersnow.flowersnow1 { 
+        left: 90%;
+        top: 10%;       
+    }
+    .flowersnow.flowersnow2 {           
+        left: 85%;
+        top: 20%; 
+    }
+    .flowersnow.flowersnow3 {          
+        left:80%;
+        top: 15%;  
+    }
+
+}
+
+/*---RWD-----850-----------------------------------------------*/
+
+@media(max-width:850px) {
+    body {
+        background-position: 95%;
+    }
+    .wrapper {
+        overflow-y: scroll;
+        padding: 15px;
+    }
+    .wrapper .content {
+        flex-direction: column;
+    }
+    .leftContent {
+        display: table;
+        margin: 0 auto;
+        width: inherit;
+        text-align: center;
+        padding-left: 0;
+    }
+    marquee {
+        width: calc( 95% - 144px);
+        line-height: 32px;
+        height: 32px;
+    }
+    .newsBox {
+        padding: 15px 0;
+        margin-bottom: 0px;
+    }
+    .newsTit {
+        background-size: contain;
+        padding: 0 16px 0 70px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .newsTit::before {        
+        top: -15px;
+    }
+   
+    .wheelTitle {
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    .wheelTitle img {
+        max-width: auto;
+    }
+    .gameTimes {
+        margin-top: inherit;
+    }
+    .iconActtell {       
+        justify-content: center;
+    }
+    .descBtn {
+        float: inherit;
+        height: 49px;
+        background-size: contain;
+        margin-bottom: 32px;
+        z-index: 9;
+    }
+    .iconActtell .descBtn img {
+        width:68%;
+    }
+    .iconUser, .iconCoin {
+        background-size: contain;
+    }
+    .textW {
+        display: flex;
+        font-size: 20px;
+        padding-left: 115px;
+        line-height: 48px;
+        margin-bottom: 8px;
+        color: #fff;
+    }
+    .rouletteBox:before {
+        content: '';
+        bottom: 60px;
+        height: 200px;
+        background-position: center;
+    }
+
+    .awardBox.win {
+        background-position: center center;
+        background-size: contain;
+        position: fixed;
+        top: 0;
+        left: 0;       
+    }
+    .awardBox .awardBoxtwt, .awardBox.win .awardBoxtwt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;        
+    }
+    .awardBox.win .textContent h2 {        
+        padding: 0;
+        margin-top: 10%;
+        margin-bottom: 3%;
+    }
+    .awardBox.win::before {       
+        max-height:490px;
+        left: 0;
+    } 
+    .pcVisible {
+        padding-top: 15px;
+    }
+    .pcVisible::before {        
+        width: 100%;
+        left: 20px;
+        width: 90%;
+    }
+    .pcVisible::after {       
+        right: auto;
+        left: 20%;
+    }    
+    #button {
+        top: calc(50% - 20px);
+    } 
+    
+    .projects1 {
+        width: 1000px;
+        left: -6%;
+        bottom: -9%;
+        background-size: contain;
+    }
+    .projects2 {
+        width: 1500px;
+        left: -19%;
+        background-size: contain;
+    }
+    .projects4 {
+        width: 660px;
+    }
+    
+}
+
+/*---RWD-----768-----------------------------------------------*/
+
+@media(max-width:768px) {
+
+    .awardBox {       
+        left: 0;
+    }
+    .awardBox .textContent h2 {
+        font-size: 52px;
+        padding-top: 20px;
+    }
+    .awardBox .textContent p {
+        font-size: 24px;
+    }
+    .awardBox::before {        
+        top: 22vh;
+        left: 205px;
+    }
+    .closeBtn {        
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 1px;
+    }
+    .awardBox.win::before {
+        left: -40px;
+    }
+    .lighting {
+        background: url(../images/xmasLuckyWheel/award/star.png) no-repeat;
+        mix-blend-mode: overlay;
+    }
+
+    .projects1 {
+        width: 1000px;
+        left: 3%;
+        bottom: -10%;
+        background-size: contain;
+    }
+    .projects2 {
+        width: 1000px;
+        bottom: -17%;
+        left: -15%;
+        background-size: contain;
+    }
+    .projects3 {
+        bottom: -22%;
+        width: 459px;
+        background-size: contain;
+    }
+    .projects4 {
+        width: 685px;
+        left: -16%;
+        bottom: -32%;
+        background-size: contain;
+    }
+}
+
+/*---RWD-----520-----------------------------------------------*/
+
+@media(max-width:520px) {
+
+    marquee{
+        width: 100%;
+        margin:auto 15px;
+    }    
+    .newsTit {
+       padding-left: 60px;
+    }
+    .newsTit::before {
+        width: 40px;
+        top:-20px;
+    }
+    .newsBox {
+        padding-bottom:0px;
+        position: relative;        
+        z-index: 9;
+    }
+    .wheelTitle::before {
+        left: 11%;
+        top: -7%;
+    }
+    .logoLight::before {       
+        left: 78%;
+        top: 33%;
+    }
+    .wheelTitle::after {
+        left: 51%;
+        top: 55.5%;
+    }
+   .pcVisible {
+        display: none;
+    }
+    .mobileVisible {       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 15px;
+    }
+    .gameTimes {
+        padding-left: 0;
+        justify-content: center;
+    }
+    .gameBox {
+        width: 100%;
+        padding-top: 45px;
+    }
+    
+    #roulette {
+        max-height: 320px;
+    }
+    #roulette .rouletteItem li img {
+        max-width: 48px;
+    }
+    .rouletteBox {
+        max-width: 320px;
+        max-height: 380px;
+    }
+    .rouletteBox:before {
+        content: '';
+        bottom: 30px;
+    }
+    .rouletteBorder {        
+        top: -25px;
+    }    
+    .descBtn img {       
+        width: 80%;
+    }
+
+    .awardBox {
+        background-position-x: center;
+        margin-top: 0;
+    }
+    .awardBox::before {
+        top: 17vh;
+        left: 36vw;
+    }
+    .awardBox.win::before {
+        max-height: 330px;
+        left: -4vw;
+        top: 53vh;
+    }
+    .awardBox .textContent h2 {
+        margin: 0 auto;
+        font-size: 36px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    .awardBox .textContent p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .textW {       
+        padding-left: 0;
+        padding-bottom: 10px;
+    }
+   
+    .arrow {       
+        top: -24px;
+    }
+    #button {
+        width: 140px;
+        top: 55%;
+    }    
+    .mobileVisible.mobileTxtBox {
+        position: relative;
+    }
+    .mobileVisible.mobileTxtBox::before {
+        content:"";
+        width: 100%;
+        height: 260px;
+        /*background: #e7e7e7;*/
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        opacity: 0.3;
+        border-radius: 20px;
+        z-index: -1;
+        filter: blur(1px);
+        box-shadow: 1px 1px 1px #000;
+    }
+    .mobileVisible .textW.iconPic{
+        position: relative;
+    }
+    .mobileVisible .iconPic::before{
+        left: -55px;
+        top: -5px;
+    }
+    .mobileVisible .textW.gameTimes.iconPic::before {        
+        top:5px;
+    }
+    .mobileVisible .textW.iconUser.iconPic {
+        margin-top: 75px;
+    }
+}
+
+/*---RWD-----450-----------------------------------------------*/
+
+@media(max-width:450px){
+
+    .descBtn img {
+        width: 75%;
+    }
+    .mobileVisible .textW.iconPic{
+        letter-spacing: 1px;
+        font-size: 18px;
+        font-weight: bold;
+    }  
+    .awardBox .textContent h2, .awardBox.win .textContent h2 {        
+        letter-spacing: 0;
+    }    
+    .awardBox.win::before {
+        left: -17vw;
+    }
+    .closeBtn {
+        margin-top: 15px;
+        padding: 7px 20px;;
+    }
+    .awardBox .textContent p {
+        text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.733);    
+    }
+
+    .wheelTitle::after {
+        top: 38.5%;
+    }
+    .playBtn::before {        
+        left: 48%;
+        top: 12%;
+    }
+    
+    .projects3 {
+        width: 360px;
+    }
+}
+
+/*---RWD-----350-----------------------------------------------*/
+
+@media(max-width:350px) {    
+   
+    .rouletteBorder {
+        top: -8px;
+        left:-16px;
+    }
+    .rouletteBorder {       
+        width: calc( 100% + 40px);
+        height: calc( 100% + 40px);
+    }
+    #button {        
+        top: 58%;
+    }
+    .arrow {
+        top: -5px;
+        left: 54%;
+    }
+    .arrow img {
+        width: 80%;
+    }
+    
+}
