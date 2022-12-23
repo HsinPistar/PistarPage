@@ -274,6 +274,10 @@ a {
   color: #bd5d38;
   text-decoration: underline;
 }
+a.worklink {
+  font-weight:bold;
+  text-decoration: none;
+}
 a:hover {
   color: #974a2d;
 }
